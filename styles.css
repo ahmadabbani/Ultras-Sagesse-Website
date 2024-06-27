@@ -30,6 +30,7 @@ body {
     font-family: AraHamahAlFidaa;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .title-color {
@@ -116,6 +117,7 @@ nav {
     max-width: 100%;
     max-height: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   .slider .slick-dots li button:before {
@@ -178,6 +180,7 @@ nav {
     background-color: #F0F0F0;;
     color: #000000;
     padding: 4rem 0 4rem 0;
+    border: 1px solid green;
 }
 
 .about-content {
@@ -831,7 +834,7 @@ nav {
     .event-cards {
         flex-basis: 100%;
     }
-    
+
     /*gallery*/
     .grid-container {
         gap: 5px;
