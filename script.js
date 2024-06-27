@@ -30,7 +30,7 @@ function closeImage() {
 $(document).ready(function () {
   var $slider = $(".slider");
   $slider.slick({
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
     autoplaySpeed: 3000,
     fade: true,
