@@ -82,7 +82,7 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 275,
+        breakpoint: 200,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

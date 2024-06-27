@@ -555,9 +555,13 @@ nav {
     flex-wrap: wrap;
 }
 
-.chant {
+.chant:nth-child(1) {
     margin-bottom: 1rem;
 }
+
+ .chant audio{
+     max-width: 100%;
+ }
 
 .chant h3{
     font-style: oblique;
@@ -573,7 +577,9 @@ nav {
 
 .merchandise-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 2rem;
 }
 
 .merch-item {
@@ -581,8 +587,8 @@ nav {
     padding: 1rem;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
     margin: 0 auto 1rem auto;
+    border-radius: 12px;
 }
 
 .merch-item h3{
@@ -839,14 +845,6 @@ nav {
         gap: 5px;
     }
 
-    /*merchandise*/
-    .merchandise-grid {
-        grid-template-columns: 1fr;
-    }
-     .merch-item img{
-        max-height: 250px;
-     }
-
       /*contact*/
       .contact-container .contact-flex-left{
         display: none;
@@ -962,6 +960,22 @@ nav {
         padding: 5px;
       }
 
+      /*merchandise*/
+    .merchandise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+.event-card {
+    max-width: 250px;
+    max-height: 250px;
+}
+    .merch-item h3{
+        font-size: 18px;
+    }
+     .merch-item img{
+        max-height: 250px;
+     }
+
        /*contact*/
        .contact-form button {
        font-size: 1rem;
@@ -1019,6 +1033,9 @@ nav {
         width: 100vw; 
         height: 50vh; 
       }
+      .chant audio{
+        max-width: 80%;
+    }
         /*contact*/
         .contact-form label {
             font-size: 16px;
