@@ -183,11 +183,12 @@ nav {
 
 .about-content {
     display: flex; 
+    align-items: center;
 }
 
 .about-text {
     flex: 1;
-    padding: 4rem 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
     color: #0B9444;
 }
 
@@ -241,7 +242,7 @@ nav {
 }
 
 .full-about-content {
-    max-width: 1000px;
+    max-width: 85%;
     margin: 0 auto;
     padding: 0 2rem;
     line-height: 1.6;
@@ -266,14 +267,13 @@ nav {
 }
 
 .full-about-content .about-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .full-about-content .about-text {
     text-align: left;
+    padding-top: 1rem;
 }
 
 .full-about-content .about-text p {
@@ -314,20 +314,36 @@ nav {
 }
 
 .full-about-content .images-flex{
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
     gap: 1rem;
 }
 
-.full-about-content .images-flex .img1{
-   width: 600px;
-   height: auto;
+.full-about-content .images-flex .grid-item:nth-child(1){
+    grid-column: 1 / span 2;
+}
+.full-about-content .images-flex .grid-item:nth-child(2){
+    grid-column: 3;
 }
 
-.full-about-content .images-flex .img2{
-    width: 400px;
-    height: 500px;
+.full-about-content .images-flex .grid-item .img1{
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.full-about-content .images-flex .grid-item .img2{
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 100%;
+    height: 100%;
+
  }
 .events {
     background-color: #F0F0F0;
@@ -412,7 +428,7 @@ nav {
     text-align: center;
   }
 
-.testimonial-card {
+.Principles-card {
     color: #ffffff;
     padding: 20px;
     text-align: center;
@@ -424,13 +440,13 @@ nav {
     margin-bottom: 4rem;
   }
 
-  .testimonial-quote {
+  .Principles-quote {
     font-style: oblique;
     font-size: 18px;
     letter-spacing: 0.2rem;
   }
 
-  .testimonial-title {
+  .Principles-title {
     font-family: RTL-Saudi-Bold;
     font-size: 22px;
     letter-spacing: 0.2rem;
@@ -449,13 +465,13 @@ nav {
     margin: auto;
   }
 
-  .grid-item{
+  .grid-container .grid-item{
     padding: 10px;
     border-radius: 12px;
     transition: all 0.5s;
   }
 
-  .grid-item:hover{
+  .grid-container .grid-item:hover{
     transform: scale(101%);
     box-shadow: 3px 3px 8px  #006838;;
   }
@@ -539,13 +555,13 @@ nav {
 }
 
 .chant {
-    width: 45%;
     margin-bottom: 1rem;
 }
 
 .chant h3{
     font-style: oblique;
     color: #0B9444;
+    margin-bottom: 0.5rem;
 }
 
 .merchandise {
@@ -565,7 +581,7 @@ nav {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 400px;
-    margin: auto;
+    margin: 0 auto 1rem auto;
 }
 
 .merch-item h3{
@@ -579,7 +595,7 @@ nav {
 }
 
 .merch-item .btn{
-    margin: 0 auto;
+    margin: 0.5rem auto 0 auto;
 }
 
 .merch-item img{
@@ -607,7 +623,6 @@ nav {
 }
 
 .contact-container .contact-flex-left img{
-    max-width: 100%;
     width: 40%;
     height: 100%;
     position: absolute;
@@ -618,7 +633,7 @@ nav {
 .contact-flex-right{
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 4rem;
     flex-basis: 60%;
     justify-content: space-between;
 }
@@ -771,9 +786,45 @@ nav {
     .burger.toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+    /*home*/
+  .slide-title {
+   width: 70%;
+  }
+    /*contact*/
+    .contact-container .contact-flex-left img{
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width: 920px) {
+     /*home*/
+     .slider {
+        max-height: 600px;
+        height: 600px;
+    }  
+    
+    .slick-slide img {
+        max-height: 600px;
+        height: 600px;
+      }
+      .slide-title {
+       font-size:2.1rem;
+       padding: 1.2rem 1.2rem;
+       }
+    /*about*/
+    .about-text p {
+        line-height: 2rem;
+     }
+     .full-about-content .quote {
+        width: 100%;
+    }
+
+     /*principles*/
+     .Principles-card {
+        padding: 15px;
+        height: 160px !important;
+      }
+
     /*events*/
     .events-container .events-image{
         display: none;
@@ -792,25 +843,201 @@ nav {
      .merch-item img{
         max-height: 250px;
      }
+      /*contact*/
+      .contact-container .contact-flex-left{
+        display: none;
+    }
+    .contact-flex-right{
+       flex-basis: 100%;
+    }
 }
 @media screen and (max-width: 768px) {
-
+    /*home*/
+    .slider {
+        max-height: 500px;
+        height: 500px;
+    }  
+    
+    .slick-slide img {
+        max-height: 500px;
+        height: 500px;
+      }
+      .slide-title {
+        font-size:1.6rem;
+        width: 80%;
+        }
+    
     /*about*/
-    .about-content {
-        align-items: center; 
+    .about-text {
+        padding: 0 1rem 0 1rem;
     }
-    .about-text { 
-        padding-top: 0;
+    .about-text h2 {
+        margin-bottom: 0.5rem;
     }
     .about-text p {
-        line-height: 1.5rem;
-     }
+        font-size: 18px;
+    }
      .about-image {
-        height: 350px;
+        height: 400px;
     }
     .btn{
         padding: 0.5rem 1rem;
     }
+    .full-about-content {
+        max-width: 95%;
+}
+}
+@media screen and (max-width: 577px) {
+
+    /*home*/
+    .slide-title {
+        padding: 0.8rem;
+        }
+        .slider .slick-dots li button:before {
+            font-size: 12px !important;
+        }
+        .slider .slick-dots li {
+            margin: 2px 0 !important;
+          } 
+
+        /*about*/
+    .about-content {
+        position: relative;
+    }
+    .about .about-text {
+        position: absolute;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: transparent;
+        text-align: center;   
+        z-index: 1;
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px); /* For Safari */
+    }
+    .about-text p {
+        line-height: 1.5rem;
+     }
+    .about-image {
+        width: 100%;
+        padding: 0 0.5rem;
+    }
+    .btn{
+        padding: 0.5rem 0.75rem;
+        font-size: 1rem;
+    }
+        
+    .full-about-content .quote blockquote {
+    font-size: 1rem;
+    }
+
+    /*principles*/
+    .Principles-card {
+        padding: 10px;
+        height: 130px !important;
+      }
+
+    .Principles-quote {
+        font-size: 16px;
+        letter-spacing: 0.1rem;
+      }
+    
+      .Principles-title {
+        font-size: 20px;
+        letter-spacing: 0.1rem;
+      }
+      /*gallery*/
+      .modal-content {
+        height: 60vh; 
+      }
+       /*contact*/
+       .contact-form button {
+       font-size: 1rem;
+    }
+
+}
+@media screen and (max-width: 524.98px) {
+    /*principles*/
+    .Principles-card {
+        padding: 10px 20px;
+        width: 80%;
+        margin: 0 2rem;
+        height: auto !important;
+      }
 }
 
+@media screen and (max-width: 480px) {
+      /*home*/
+      .slider {
+        max-height: 400px;
+        height: 400px;
+       }  
+       .slick-slide img {
+        max-height: 400px;
+        height: 400px;
+       }
+       .slide-title {
+        font-size: 1.3rem ;
+        width: 90%;
+        }
+        .title-color {
+           font-size: 1.2rem;
+        }
 
+        /*about*/
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.2rem;
+        }
+        .full-about-content .sm img {
+            height: 300px;    
+        }
+        .full-about-content .images-flex{
+                grid-template-columns: repeat(1, 1fr);
+                gap: 0.5rem;
+            }
+            .full-about-content .images-flex .grid-item:nth-child(1){
+                grid-column: 1;
+            }
+            .full-about-content .images-flex .grid-item:nth-child(2){
+                grid-column: 1;
+            }
+         /*gallery*/
+      .modal-content {
+        width: 100vw; 
+        height: 50vh; 
+      }
+        /*contact*/
+        .contact-form label {
+            font-size: 16px;
+        }
+        .contact-form button {
+            font-size: 0.8rem;
+            padding: 0.75rem 1.25rem;
+        }
+        .contact-container .social-list li a{
+            font-size: 20px;
+        }
+        
+        .copyright-notice p{
+            font-size: 16px;
+        }
+        .contact-container .social-list li{
+            margin-right: 0.5rem;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 1.5rem;
+        }
+}
+@media screen and (max-width: 350px) {
+     /*about*/
+    .full-about-content .sm img {
+        height: 200px;    
+    }
+}
+
+       

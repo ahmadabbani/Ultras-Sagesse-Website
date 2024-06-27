@@ -9,27 +9,25 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
-    />
-    <!-- Remix Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"
     />
-
     <!-- jQuery (required for Slick) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <!-- Slick JavaScript -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"
     ></script>
+    <!-- Remix Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css"
+    />
   </head>
 
   <body>
@@ -88,35 +86,35 @@
     </section>
     <section id="Principles" class="Principles">
       <h2 class="title-color">Our Core Principles</h2>
-      <div class="testimonial-slider">
-        <div class="testimonial-card">
-          <p class="testimonial-title">Loyalty</p>
-          <p class="testimonial-quote">
+      <div class="Principles-slider">
+        <div class="Principles-card">
+          <p class="Principles-title">Loyalty</p>
+          <p class="Principles-quote">
             "Loyalty is our foundation. We stand with our team through thick and
             thin."
           </p>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-title">Passion</p>
-          <p class="testimonial-quote">
+        <div class="Principles-card">
+          <p class="Principles-title">Passion</p>
+          <p class="Principles-quote">
             "Passion fuels us. Every chant, every game, we bring the energy."
           </p>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-title">Respect</p>
-          <p class="testimonial-quote">
+        <div class="Principles-card">
+          <p class="Principles-title">Respect</p>
+          <p class="Principles-quote">
             "Respect for the game. We honor fair play and sportsmanship."
           </p>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-title">Unity</p>
-          <p class="testimonial-quote">
+        <div class="Principles-card">
+          <p class="Principles-title">Unity</p>
+          <p class="Principles-quote">
             "Unity in diversity. We embrace all fans who share our passion."
           </p>
         </div>
-        <div class="testimonial-card">
-          <p class="testimonial-title">Community</p>
-          <p class="testimonial-quote">
+        <div class="Principles-card">
+          <p class="Principles-title">Community</p>
+          <p class="Principles-quote">
             "Community above all. We support our local community and give back."
           </p>
         </div>
@@ -302,69 +300,6 @@
         </div>
       </div>
     </section>
-
     <script src="script.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        var $slider = $(".slider");
-        $slider.slick({
-          autoplay: true,
-          pauseOnHover: false,
-          autoplaySpeed: 3000,
-          fade: true,
-          dots: true,
-          arrows: false,
-          infinite: true,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 0,
-          centerMode: false,
-        });
-        $slider.on("afterChange", function () {
-          $slider.slick("slickPlay");
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".testimonial-slider").slick({
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          pauseOnHover: false,
-          autoplaySpeed: 2000,
-          dots: true,
-          arrows: false,
-          infinite: true,
-          centerMode: false,
-          speed: 500,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              },
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-          ],
-        });
-      });
-    </script>
   </body>
 </html>
