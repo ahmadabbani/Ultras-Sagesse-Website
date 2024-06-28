@@ -1,3 +1,21 @@
+//Header
+function scrollHeader() {
+  const header = document.getElementById("header");
+  const logo = document.getElementById("logo");
+  const nav = document.querySelector(".nav-links");
+  //when the scroll is greater than 50 viewport
+  if (this.scrollY >= 50) {
+    header.classList.add("scroll-header");
+    logo.classList.add("remove-logo");
+    nav.classList.add("nav-position");
+  } else {
+    header.classList.remove("scroll-header");
+    logo.classList.remove("remove-logo");
+    nav.classList.remove("nav-position");
+  }
+}
+window.addEventListener("scroll", scrollHeader);
+
 // Toggle navigation menu for mobile view
 document.addEventListener("DOMContentLoaded", () => {
   const burger = document.querySelector(".burger");
@@ -11,6 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
     burger.classList.toggle("toggle");
   });
 });
+
+//Active link
+const navlink = document.querySelectorAll(".nav-link");
+function activeLink() {
+  navlink.forEach((a) => a.classList.remove("active-link"));
+  this.classList.add("active-link");
+}
+navlink.forEach((a) => a.addEventListener("click", activeLink));
 
 // Image modal functions
 function openImage(imageSrc) {

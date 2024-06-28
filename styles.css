@@ -1,4 +1,4 @@
-/*fonts*/
+/*
 @font-face {
     font-family: 'AraHamahAlFidaa'; 
     src: url('fonts/AraHamahAlFidaa-Regular.otf') format('opentype'), 
@@ -14,7 +14,7 @@
   @font-face {
     font-family: 'RTL-Saudi-Bold'; 
     src: url('fonts/RTL-Saudi-Bold.otf') format('opentype'), 
-  }
+  }*/
 
 *{
     padding: 0;
@@ -27,7 +27,7 @@ html{
 }
   
 body {
-    font-family: AraHamahAlFidaa;
+    font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -35,17 +35,29 @@ body {
 
 .title-color {
     color: #0B9444;
-    font-family: RTL-Saudi-Bold;
+    font-weight: 900;
     letter-spacing: 0.5rem;
     margin-bottom: 1rem;
  }
 
 header {
-    background-color: #0B9444;
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
+    background-color: white;
+    padding: 0 1rem;
+    transition: 0.3s;
 }
 
+.scroll-header{
+    position: fixed;
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 / 15%);
+    z-index: 999;
+    width: 100%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.scroll-header nav{
+    justify-content: center;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -53,9 +65,13 @@ nav {
 }
 
 .logo img {
-    width: 90px;
-    height: 90px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+}
+
+.remove-logo{
+    display: none;
 }
 
 .nav-links {
@@ -69,16 +85,35 @@ nav {
     margin-right: 1rem;
 }
 
+.nav-link:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #0B9444;
+    bottom: -15px;
+    left: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  }
+
+  .nav-link:hover:after{
+    width:50%;
+    left: 25%;
+    right: 25%;
+  }
+
 .nav-links li a {
-    color: #FFFFFF;
+    position: relative;
+    color: #0B9444;
     text-decoration: none;
-    padding: 0.5rem;
-    font-size: 28px;
+    padding:0 0.5rem;
+    font-size: 20px;
+    font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.nav-links li a:hover {
-    color: #006838;
+.active-link{
+    opacity: 0.4;
 }
 
 .burger {
@@ -89,7 +124,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: #FFFFFF;
+    background-color: #0B9444;
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -161,9 +196,9 @@ nav {
     border-radius: 10px;
     text-align: center;
     font-size: 2.6rem;
-    font-family:RTL-Saudi-Bold;
-    font-style: oblique;
-    letter-spacing: 0.4rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 0.3rem;
     z-index: 1;
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -199,9 +234,7 @@ nav {
 
 .about-text p {
    line-height: 2.5rem;
-   font-family:Geakosa-Regular ;
    font-size: 22px;
-   letter-spacing: 0.1rem;
    margin-bottom: 1rem;
 }
 
@@ -228,7 +261,6 @@ nav {
     border-radius: 5px;
     transition: background-color 0.3s ease;
     font-size: larger;
-    letter-spacing: 0.1rem;
 }
 
 .btn:hover {
@@ -353,37 +385,35 @@ nav {
 }
 
 .events-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: start;
 }
 
 .event-cards {
-    flex-basis: 75%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*margin: 0 0 0 2rem;*/
+    padding: 0 1rem;
     gap: 1rem;
-    margin: 0 0 0 2rem;
-    justify-content:stretch;
-}
-
-.events-container .events-image{
-    flex-basis: 25%;
-    padding: 0 2rem 0 0;
 }
 
 .events-container .events-image img{
    max-width: 100%;
    width: 100%;
-   height: 550px;
+   max-height: 550px;
+   object-fit: cover;
    border-radius: 12px;
 }
 
 .event-card {
-    width: 300px;
     color:#FFFFFF;
     background-color: #0B9444;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
 }
 
 .event-card:hover {
@@ -391,19 +421,21 @@ nav {
 }
 
 .event-details {
-    padding: 1.5rem;
+    text-align: center;
 }
 
 .event-details h3 {
     margin-top: 0;
-    font-family: RTL-Saudi-Bold;
+    font-weight: 900;
     font-size: 20px;
-    letter-spacing: 0.2rem
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .event-details p {
     margin-bottom: 0.5rem;
-    font-style: oblique;
+    padding: 0 0.5rem;
+    font-style: italic;
     font-size: 18px;
     letter-spacing: 0.2rem;
 }
@@ -414,7 +446,7 @@ nav {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
     border-radius: 5px;
     transition:  0.3s ease;
 }
@@ -430,8 +462,12 @@ nav {
   }
 
 .Principles-card {
+    max-height: 120px !important;
+    height: 120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0.5rem 0;
     color: #ffffff;
-    padding: 20px;
     text-align: center;
     margin: 0 15px;
     border-radius: 12px;
@@ -442,15 +478,15 @@ nav {
   }
 
   .Principles-quote {
-    font-style: oblique;
-    font-size: 18px;
-    letter-spacing: 0.2rem;
+    font-style: italic;
+    font-size: 16px;
+    padding: 1rem 1rem 0 1rem;
+    
   }
 
   .Principles-title {
-    font-family: RTL-Saudi-Bold;
-    font-size: 22px;
-    letter-spacing: 0.2rem;
+    font-weight: 900;
+    font-size: 20px;
   }
   
 .gallery {
@@ -564,7 +600,7 @@ nav {
  }
 
 .chant h3{
-    font-style: oblique;
+    font-style: italic;
     color: #0B9444;
     margin-bottom: 0.5rem;
 }
@@ -592,7 +628,7 @@ nav {
 }
 
 .merch-item h3{
-    font-family: RTL-Saudi-Bold;
+    font-weight: 900;
     font-size: 22px;
     letter-spacing: 0.2rem;
 }
@@ -652,7 +688,6 @@ nav {
 }
 
 .contact-form label {
-    font-family: AraHamahAlFidaa;
     font-size: 18px;
 }
 
@@ -748,8 +783,7 @@ nav {
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1338px) {
     .event-cards {
-        justify-content: center;
-        margin: 0;
+    grid-template-columns: repeat(2, 1fr);
     }
 }
 @media screen and (max-width: 1024px) {
@@ -758,13 +792,17 @@ nav {
         text-align: center;
         width: 100%;
         position: absolute;
-        top: calc(90px + 1rem);
+        top: 100px;
         left: 0;
-        background-color: #0B9444;
+        background-color: white;
         z-index: 999;
         opacity: 0;
         pointer-events: none;
         transition: all 0.3s ease;
+    }
+
+    .nav-position{
+        top: calc(24px + 2.5rem) ; 
     }
 
     .nav-links.active {
@@ -773,9 +811,17 @@ nav {
         z-index: 999;
     }
 
+    .nav-link:after{
+        bottom: -5px;
+    }
+
     .nav-links li {
         margin-bottom: 1rem;
         margin-right: 0;
+    }
+
+    .scroll-header nav{
+        justify-content: right;
     }
 
     .burger  {
@@ -793,10 +839,12 @@ nav {
     .burger.toggle .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+
     /*home*/
   .slide-title {
    width: 70%;
   }
+
     /*contact*/
     .contact-container .contact-flex-left img{
         object-fit: cover;
@@ -818,6 +866,7 @@ nav {
        font-size:2.1rem;
        padding: 1.2rem 1.2rem;
        }
+
     /*about*/
     .about-text p {
         line-height: 2rem;
@@ -826,18 +875,18 @@ nav {
         width: 100%;
     }
 
-     /*principles*/
+     /*principles
      .Principles-card {
         padding: 15px;
         height: 160px !important;
-      }
+      }*/
 
     /*events*/
     .events-container .events-image{
         display: none;
     }
-    .event-cards {
-        flex-basis: 100%;
+    .events-container{
+        grid-template-columns: 1fr;
     }
 
     /*gallery*/
@@ -887,7 +936,7 @@ nav {
     }
     .full-about-content {
         max-width: 95%;
-}
+    }
 }
 @media screen and (max-width: 577px) {
 
@@ -936,11 +985,11 @@ nav {
     font-size: 1rem;
     }
 
-    /*principles*/
+    /*principles
     .Principles-card {
         padding: 10px;
         height: 130px !important;
-      }
+      }*/
 
     .Principles-quote {
         font-size: 16px;
@@ -965,10 +1014,18 @@ nav {
         grid-template-columns: 1fr;
     }
     
-.event-card {
-    max-width: 250px;
-    max-height: 250px;
-}
+    /*events*/
+    .event-cards {
+        gap: 0.5rem;
+    }
+    .event-details h3 {
+        letter-spacing: 0.1rem;
+        font-size: 18px;
+    }
+    .event-details p {
+        font-size: 16px;
+        letter-spacing: 0.1rem;
+    }
     .merch-item h3{
         font-size: 18px;
     }
@@ -983,13 +1040,19 @@ nav {
 
 }
 @media screen and (max-width: 524.98px) {
-    /*principles*/
+    /*principles
     .Principles-card {
         padding: 10px 20px;
         width: 80%;
         margin: 0 2rem;
         height: auto !important;
-      }
+      }*/
+
+      /*events*/
+      .event-details p {
+        font-size: 14px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1028,6 +1091,15 @@ nav {
             .full-about-content .images-flex .grid-item:nth-child(2){
                 grid-column: 1;
             }
+
+            /*events*/
+            .event-cards {
+                grid-template-columns: 1fr;
+            }
+            .event-details p {
+                padding: 0;
+            }
+
          /*gallery*/
       .modal-content {
         width: 100vw; 
