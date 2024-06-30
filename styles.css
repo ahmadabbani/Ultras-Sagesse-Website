@@ -585,24 +585,73 @@ nav {
     text-align: center;
 }
 
-.chant-list {
+.chants .container{
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content:center;
+    gap: 2rem;
+    border: 1px solid black;
 }
 
-.chant:nth-child(1) {
-    margin-bottom: 1rem;
+#chants-and-songs { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid green;
 }
 
- .chant audio{
-     max-width: 100%;
- }
+#chants-and-songs .song-cover{
+  max-width: 100%;
+  width: 100%;
+  height:650px;
+  border-radius: 12px;
+  object-fit: cover;
+}
 
-.chant h3{
-    font-style: italic;
-    color: #0B9444;
-    margin-bottom: 0.5rem;
+audio {
+    display: none;
+}
+
+.song-container {
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0.5rem;
+    width: 70%;
+    height: 60px;
+    border-radius: 65px;
+    top: 7.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    box-shadow: 0 1px 5px #0B9444;
+}
+
+
+.play-icon{
+    display: block;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.lyrics{
+   border: 1px solid rgb(255, 0, 0);
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   position: relative;
+}
+
+.lyrics .lyricsimg{
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
 }
 
 .merchandise {
@@ -620,10 +669,11 @@ nav {
 
 .merch-item {
     background-color: #FFFFFF;
+    max-width: 400px;
     padding: 1rem;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 0 auto 1rem auto;
+    margin: 0 auto;
     border-radius: 12px;
 }
 
@@ -786,6 +836,15 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     }
 }
+
+@media screen and (max-width: 1231px) {
+    .lyrics .lyricsimg{
+       height: 400px;
+    }
+    #chants-and-songs .song-cover{
+        height:550px;
+      }
+}
 @media screen and (max-width: 1024px) {
     .nav-links { 
         flex-direction: column;
@@ -845,6 +904,14 @@ nav {
    width: 70%;
   }
 
+  /*songs*/
+  .lyrics .lyricsimg{
+   height: 350px;
+}
+#chants-and-songs .song-cover{
+    height:450px;
+  }
+
     /*contact*/
     .contact-container .contact-flex-left img{
         object-fit: cover;
@@ -875,12 +942,6 @@ nav {
         width: 100%;
     }
 
-     /*principles
-     .Principles-card {
-        padding: 15px;
-        height: 160px !important;
-      }*/
-
     /*events*/
     .events-container .events-image{
         display: none;
@@ -893,6 +954,18 @@ nav {
     .grid-container {
         gap: 5px;
     }
+
+     /*songs*/
+     .lyrics{
+       justify-content: center;
+        flex-direction: column;
+     }
+     .lyrics .lyricsimg{
+        height: 400px;
+     }
+     #chants-and-songs .song-cover{
+         height:800px;
+       }
 
       /*contact*/
       .contact-container .contact-flex-left{
@@ -937,6 +1010,13 @@ nav {
     .full-about-content {
         max-width: 95%;
     }
+      /*songs*/
+      #chants-and-songs .song-cover{
+        height:600px; 
+        }
+        .lyrics .lyricsimg{
+            height: 300px;
+         }
 }
 @media screen and (max-width: 577px) {
 
@@ -952,7 +1032,7 @@ nav {
           } 
 
         /*about*/
-    .about-content {
+     .about-content {
         position: relative;
     }
     .about .about-text {
@@ -984,12 +1064,6 @@ nav {
     .full-about-content .quote blockquote {
     font-size: 1rem;
     }
-
-    /*principles
-    .Principles-card {
-        padding: 10px;
-        height: 130px !important;
-      }*/
 
     .Principles-quote {
         font-size: 16px;
@@ -1040,19 +1114,17 @@ nav {
 
 }
 @media screen and (max-width: 524.98px) {
-    /*principles
-    .Principles-card {
-        padding: 10px 20px;
-        width: 80%;
-        margin: 0 2rem;
-        height: auto !important;
-      }*/
-
       /*events*/
       .event-details p {
         font-size: 14px;
     }
-
+     /*songs*/
+     #chants-and-songs .song-cover{
+        height:500px;
+      }
+      .lyrics .lyricsimg{
+        height: 280px;
+     }
 }
 
 @media screen and (max-width: 480px) {
@@ -1108,6 +1180,13 @@ nav {
       .chant audio{
         max-width: 80%;
     }
+       /*songs*/
+       #chants-and-songs .song-cover{
+        height:400px;
+      }
+      .lyrics .lyricsimg{
+        height: 250px;
+     }
         /*contact*/
         .contact-form label {
             font-size: 16px;
@@ -1131,11 +1210,27 @@ nav {
             margin-bottom: 1.5rem;
         }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 420px) {
+  /*songs*/
+  #chants-and-songs .song-cover{
+    height:350px;
+  }
+  .lyrics .lyricsimg{
+    height: 200px;
+ }
+}
+@media screen and (max-width: 355px) {
      /*about*/
     .full-about-content .sm img {
         height: 200px;    
     }
+     /*songs*/
+     .lyrics .lyricsimg{
+        height: 180px;
+     }
+     #chants-and-songs .song-cover{
+         height:250px;
+       }
 }
 
        

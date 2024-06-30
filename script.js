@@ -38,6 +38,29 @@ function activeLink() {
 }
 navlink.forEach((a) => a.addEventListener("click", activeLink));
 
+//audio
+document
+  .getElementById("play-icon")
+  .addEventListener("click", function (event) {
+    const audio = document.getElementById("song");
+    const playIcon = this;
+
+    if (audio.paused) {
+      audio.play();
+      playIcon.src = "images/pause.png";
+    } else {
+      audio.pause();
+      playIcon.src = "images/play.png";
+    }
+
+    // Prevent the event from bubbling up to the container
+    event.stopPropagation();
+  });
+
+document.getElementById("song").addEventListener("ended", function () {
+  document.getElementById("play-icon").src = "images/play.png";
+});
+
 // Image modal functions
 function openImage(imageSrc) {
   var modal = document.getElementById("imageModal");
