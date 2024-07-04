@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Brief History - Ultras Sagesse</title>
     <link rel="stylesheet" href="styles.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <!-- Remix Icons -->
     <link
       rel="stylesheet"
@@ -12,15 +19,17 @@
     />
   </head>
   <body>
-    <header>
+    <header id="header">
       <nav>
-        <div class="logo">
+        <div class="logo" id="logo">
           <img src="images/ultras-logo.jpg" alt="ultras-sagesse-logo" />
         </div>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#full-about">Brief History</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li>
+            <a href="#full-about" class="nav-link active-link">Brief History</a>
+          </li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
         <div class="burger">
           <div class="line1"></div>
@@ -34,64 +43,53 @@
       <div class="full-about-content">
         <h2 class="title-color">Ultras History</h2>
         <div class="about-grid">
-          <div class="about-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-              fringilla sapien vel nisi pharetra placerat. Ut vestibulum mi at
-              magna maximus, id tempor velit volutpat. Aenean vehicula, metus et
-              interdum efficitur, est nunc consequat nunc, ac dapibus elit ex
-              nec ligula.
-            </p>
-            <p>
-              In ultricies tellus ac augue laoreet gravida. Morbi egestas quam
-              sit amet orci placerat, sed consequat dui scelerisque. Donec vitae
-              libero in sapien facilisis tincidunt. Integer a luctus odio, vitae
-              consectetur justo. Duis id ultrices nisi.
-            </p>
-            <div class="quote">
-              <blockquote>
-                "Passionate support is the lifeblood of any sports club"
-              </blockquote>
-            </div>
-            <div class="image sm">
-              <img src="images/image6.png" alt="Image 1" />
-            </div>
-            <p>
-              Proin eget lectus et purus tincidunt fermentum. Vivamus gravida
-              scelerisque velit, eu aliquam ipsum mollis non. Nunc vel eros non
-              felis congue elementum. Integer efficitur lacinia ante id laoreet.
-              Nulla consequat, ligula vel consectetur pulvinar, dui arcu
-              bibendum felis, sit amet bibendum risus velit ac sapien.
-            </p>
-            <div class="quote">
-              <blockquote>
-                "Together, we create an atmosphere that fuels our team's
-                spirit."
-              </blockquote>
-            </div>
-            <div class="images-flex">
-              <div class="grid-item">
-                <img src="images/about.jpg" class="img1" alt="Image 2" />
-              </div>
-
-              <div class="grid-item">
-                <img src="images/about2.jpg" class="img2" alt="Image 3" />
+          <div class="first-grid-item">
+            <div class="about-paragraph">
+              <p class="parag parag-first">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                fringilla sapien vel nisi pharetra placerat. Ut vestibulum mi at
+                magna maximus, id tempor velit volutpat. Aenean vehicula, metus
+                et interdum efficitur, est nunc consequat nunc, ac dapibus elit
+                ex nec ligula.Proin eget lectus et purus tincidunt fermentum.
+              </p>
+              <div class="grid-img">
+                <div class="quote">
+                  <blockquote>
+                    "Passionate support is the lifeblood of any sports club"
+                  </blockquote>
+                </div>
+                <div class="image sm">
+                  <img src="images/about.jpg" alt="Image 1" />
+                </div>
               </div>
             </div>
-            <p>
-              Sed ultricies, lorem eget posuere dignissim, mauris justo luctus
-              nisi, sed vestibulum eros odio eget odio. Proin convallis justo
-              sit amet urna dignissim, et volutpat lacus ultricies. Aenean non
-              ante ut magna vehicula aliquam. Donec finibus metus sit amet eros
-              consectetur, a bibendum nisl hendrerit.
-            </p>
-            <p>
-              Integer vitae lacus nec libero ullamcorper posuere. Sed feugiat
-              nunc et arcu blandit scelerisque. Duis in lacus nec arcu luctus
-              pharetra sit amet vel ex. Mauris luctus, neque at molestie
-              fringilla, arcu felis dapibus urna, vel varius metus odio sed sem.
-            </p>
-            <a href="index.html" class="btn"> Back Home</a>
+          </div>
+          <div class="second-grid-item">
+            <div class="about-paragraph">
+              <div class="grid-img">
+                <div class="quote">
+                  <blockquote>
+                    "Together, we create an atmosphere that fuels our team's
+                    spirit."
+                  </blockquote>
+                </div>
+                <div class="image sm">
+                  <img src="images/image6.png" class="img1" alt="Image 2" />
+                </div>
+              </div>
+              <p class="parag parag-second">
+                Sed ultricies, lorem eget posuere dignissim, mauris justo luctus
+                nisi, sed vestibulum eros odio eget odio. Proin convallis justo
+                sit amet urna dignissim, et volutpat lacus ultricies. Aenean non
+                ante ut magna vehicula aliquam. Donec finibus metus sit amet
+                eros consectetur, a bibendum nisl hendrerit. Integer vitae lacus
+                nec libero ullamcorper posuere. Sed feugiat nunc et arcu blandit
+                scelerisque. Duis in lacus nec arcu luctus pharetra sit amet vel
+                ex. Mauris luctus, neque at molestie fringilla, arcu felis
+                dapibus urna.
+              </p>
+              <a href="index.html" class="btn"> Back Home</a>
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +100,7 @@
           <img src="images/ultras-logo.jpg" />
         </div>
         <div class="contact-flex-right">
-          <h2 class="title-color">Get In Touch</h2>
+          <h2 class="title-color footer-main-title">Get In Touch</h2>
           <form action="#" method="POST" class="contact-form">
             <label for="name" class="title-color">Your Name</label>
             <input type="text" id="name" name="name" required />
@@ -118,7 +116,7 @@
             <button type="submit" class="btn">Send Message</button>
           </form>
           <div class="social">
-            <h2 class="title-color">Follow Us</h2>
+            <h2 class="title-color footer-title">Follow Us</h2>
             <ul class="social-list">
               <li>
                 <a><i class="ri-facebook-circle-line"></i></a>

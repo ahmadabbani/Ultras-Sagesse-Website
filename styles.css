@@ -1,20 +1,3 @@
-/*
-@font-face {
-    font-family: 'AraHamahAlFidaa'; 
-    src: url('fonts/AraHamahAlFidaa-Regular.otf') format('opentype'), 
-  }
-  @font-face {
-    font-family: 'Geakosa-Oblique';
-    src: url('fonts/Geakosa\ Oblique.ttf') format('truetype'), 
-  }
-  @font-face {
-    font-family: 'Geakosa-Regular'; 
-    src: url('fonts/Geakosa\ Regular.otf') format('truetype'), 
-  }
-  @font-face {
-    font-family: 'RTL-Saudi-Bold'; 
-    src: url('fonts/RTL-Saudi-Bold.otf') format('opentype'), 
-  }*/
 
 *{
     padding: 0;
@@ -267,117 +250,88 @@ nav {
     background-color: #006838;
 }
 
-
+/*full about*/
 .full-about {
-    padding: 3rem 0 4rem 0;
-    background-color: #FFFFFF;
-    text-align: center;
+    padding: 2rem 0 2rem 0;
+    background-color: #FFFFFF;  
 }
 
 .full-about-content {
-    max-width: 85%;
-    margin: 0 auto;
     padding: 0 2rem;
-    line-height: 1.6;
     text-align: justify;
+}
+
+.full-about-content .btn{
+    margin-top: 1.5rem;
 }
 
 .full-about-content h2 {
     margin-bottom: 0;
+    font-size: 40px;
 }
 
-.full-about-content .about-text p {
-    padding: 0;
-    margin-top: 0;
+.parag {
+   line-height: 2.5rem;
+   font-size: 22px;
+   color: #0B9444;
+   display: flex;
+   align-items: center;
+   height: 100%;
 }
 
-.full-about-content .quote blockquote {
-   font-style: italic;
-    color: #666666;
-    display: block;
-    font-size: 20px;
-    border-left: 4px solid #0B9444;
+.parag-first{
+    padding-right: 2rem;
+}
+
+.parag-second{
+    padding-left: 2rem;
 }
 
 .full-about-content .about-grid {
-   display: flex;
-   align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.5rem;
 }
 
-.full-about-content .about-text {
-    text-align: left;
-    padding-top: 1rem;
+.first-grid-item{
+    grid-column: span 2;
 }
 
-.full-about-content .about-text p {
-    margin-bottom: 1rem;
+.second-grid-item{
+    grid-column: span 2;
+}
+
+.about-paragraph{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .full-about-content .quote {
     margin: 0 auto;
     text-align: center;
-    width: 70%;
+    width: 100%;
+    padding-bottom: 0.25rem;
 }
 
 .full-about-content .quote blockquote {
     font-style: italic;
     color: #666666;
-    margin: 0;
+    display: inline;
+    font-size: 16px;
     padding-left: 1rem;
     border-left: 4px solid #0B9444;
 }
 
-.full-about-content .image {
-    text-align: center;
-    padding-top: 0.5rem;
-}
-
-.full-about-content .image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .full-about-content .sm img {
-    width: 400px;
+    width: 100%;
+    max-width: 100%;
     height: 400px;
+    object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.full-about-content .images-flex{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-    gap: 1rem;
-}
-
-.full-about-content .images-flex .grid-item:nth-child(1){
-    grid-column: 1 / span 2;
-}
-.full-about-content .images-flex .grid-item:nth-child(2){
-    grid-column: 3;
-}
-
-.full-about-content .images-flex .grid-item .img1{
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block;
-    width: 100%;
-    height: 100%;
-    
-}
-
-.full-about-content .images-flex .grid-item .img2{
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: block;
-    width: 100%;
-    height: 100%;
-
- }
+/*events*/
 .events {
     background-color: #F0F0F0;
     padding: 4rem 0;
@@ -589,14 +543,12 @@ nav {
     display: flex;
     justify-content:center;
     gap: 2rem;
-    border: 1px solid black;
 }
 
 #chants-and-songs { 
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
 }
 
 #chants-and-songs .song-cover{
@@ -638,7 +590,6 @@ audio {
 }
 
 .lyrics{
-   border: 1px solid rgb(255, 0, 0);
    display: flex;
    align-items: center;
    gap: 2rem;
@@ -696,39 +647,46 @@ audio {
 }
 
 .contact {
-    background-color: #006838;
     padding: 3rem 0 0 0;
     text-align: center;
-    position: relative;
 }
 
 .contact .title-color{
     color: #FFFFFF;
 }
 
+.contact .footer-main-title{
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
 .contact-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .contact-container .contact-flex-left{
     padding: 0;
-    flex-basis: 40%;
+    grid-row: 1;
 }
 
 .contact-container .contact-flex-left img{
-    width: 40%;
+    width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
 }
 
 .contact-flex-right{
+    background-color: #006838;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    flex-basis: 60%;
+    gap: 1rem;
     justify-content: space-between;
+}
+
+.footer-title{
+    font-size: 1rem;
 }
 
 .contact-form {
@@ -738,7 +696,7 @@ audio {
 }
 
 .contact-form label {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .contact-form  .message-label{
@@ -754,8 +712,8 @@ audio {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 0.5rem;
-    margin-bottom: 1.8rem;
+    padding:  0 0.5rem;
+    margin-bottom: 1.5rem;
     outline: none;
     color: #FFFFFF;
     font-size: 14px;
@@ -772,21 +730,23 @@ audio {
 
 .contact-form textarea {
     border-radius: 5px;
-    color: #006838;;
+    color: #006838;
+    margin-bottom: 0.8rem;
 }
 
 .contact-form button {
-    background-color: #0B9444;
+    background-color: transparent;
     color: #FFFFFF;
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 16px;
+    border: 2px solid #FFFFFF;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
     margin-left: 10%;
 }
 
 .contact-form button:hover {
-    background-color: #006838;
+    opacity: 0.7;
 }
 
 .contact-container .social-list{
@@ -795,15 +755,6 @@ audio {
     margin: 0;
     padding: 0;
     justify-content: center;
-}
-
-.contact-container .social-list li{
-    margin-right: 1rem;
-}
-
-.contact-container .social-list li a {
-  color:#FFFFFF;
-  cursor: pointer;
 }
 
 .contact-container .social-list li{
@@ -819,15 +770,17 @@ audio {
 .contact-container .social-list li a{
     color: #FFFFFF;
     text-decoration: none;
-    padding: 0.5rem;
-    font-size: 28px;
+    font-size: 23px;
+    padding: 0 0.5rem;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .copyright-notice p{
     color: #e7e7e7;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 0.2rem;
+    padding-top: 0.5rem;
 }
 
 /* Media Queries for Responsive Design */
@@ -911,8 +864,16 @@ audio {
 #chants-and-songs .song-cover{
     height:450px;
   }
+  .song-container {
+    height: 40px;
+    top: 5px;
+  }
+  .play-icon{
+    width: 28px;
+    height: 28px;
+}
 
-    /*contact*/
+  /*contact*/
     .contact-container .contact-flex-left img{
         object-fit: cover;
     }
@@ -956,9 +917,13 @@ audio {
     }
 
      /*songs*/
+     .chants .container {
+        position: relative;
+           }
      .lyrics{
        justify-content: center;
         flex-direction: column;
+        position: static;
      }
      .lyrics .lyricsimg{
         height: 400px;
@@ -966,14 +931,14 @@ audio {
      #chants-and-songs .song-cover{
          height:800px;
        }
+     
+       .song-container {
+       width: 30%;
+       top: 25px;
+       left: 4rem;
+       transform: translateX(0);
+      }
 
-      /*contact*/
-      .contact-container .contact-flex-left{
-        display: none;
-    }
-    .contact-flex-right{
-       flex-basis: 100%;
-    }
 }
 @media screen and (max-width: 768px) {
     /*home*/
@@ -1017,6 +982,13 @@ audio {
         .lyrics .lyricsimg{
             height: 300px;
          }
+          /*contact*/
+          .contact-container{
+            grid-template-columns: 1fr;
+        }
+      .contact-container .contact-flex-left{
+        display: none;
+    }
 }
 @media screen and (max-width: 577px) {
 
@@ -1109,7 +1081,7 @@ audio {
 
        /*contact*/
        .contact-form button {
-       font-size: 1rem;
+       margin-bottom: 1rem;
     }
 
 }
@@ -1125,6 +1097,16 @@ audio {
       .lyrics .lyricsimg{
         height: 280px;
      }
+       .song-container {
+       height: 30px;
+       width: 40%;
+       top: 0; 
+       left: 0;   
+      }
+      .play-icon{
+        width: 20px;
+        height: 20px;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -1181,40 +1163,62 @@ audio {
         max-width: 80%;
     }
        /*songs*/
-       #chants-and-songs .song-cover{
-        height:400px;
+       #chants-and-songs{
+       display: none;
       }
+      .chants .container {
+        position: static;
+           }
+      .lyrics{
+       flex-direction: row;
+       gap: 1rem;
+       position: relative;
+     }
       .lyrics .lyricsimg{
         height: 250px;
      }
+     .song-container {
+        height: 15px;
+        top:0;
+        left: 50%;
+        transform: translateX(-50%);
+     }
+     .play-icon{
+        width: 15px;
+        height: 15px;
+    }
         /*contact*/
         .contact-form label {
-            font-size: 16px;
+            font-size: 11px;
+            letter-spacing: 0.3rem;
         }
         .contact-form button {
-            font-size: 0.8rem;
-            padding: 0.75rem 1.25rem;
+            font-size: 14px;
+         }
+         .footer-title{
+            font-size: 0.9rem;
         }
         .contact-container .social-list li a{
-            font-size: 20px;
+            font-size: 18px;
+            padding: 0 0.35rem;
         }
         
         .copyright-notice p{
-            font-size: 16px;
-        }
-        .contact-container .social-list li{
-            margin-right: 0.5rem;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            margin-bottom: 1.5rem;
+            font-size: 12px;
         }
 }
 @media screen and (max-width: 420px) {
   /*songs*/
-  #chants-and-songs .song-cover{
-    height:350px;
-  }
+  .song-container {
+    height: 13px;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .play-icon{
+    width: 10px;
+    height: 10px;
+}
   .lyrics .lyricsimg{
     height: 200px;
  }
