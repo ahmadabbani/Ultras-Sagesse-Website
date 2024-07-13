@@ -1009,6 +1009,12 @@ audio {
         padding-left: 0;
         padding-top: 0.5rem;
     }
+    .about-img1 {
+        content: url('./images/about-mobile.jpg');
+      }
+      .about-img2 {
+        content: url('./images/image6-mobile.png');
+      }
    
       /*songs*/
       #chants-and-songs .song-cover{
@@ -1023,6 +1029,9 @@ audio {
         }
       .contact-container .contact-flex-left{
         display: none;
+    }
+    .copyright-notice p{
+        font-size: 11px;
     }
 }
 @media screen and (max-width: 577px) {
@@ -1050,11 +1059,11 @@ audio {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        background: rgb(255, 255, 255, 0.8);
+        background: rgb(255, 255, 255, 0.6);
         text-align: center;   
         z-index: 1;
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px); /* For Safari */
+        backdrop-filter: blur(5px); 
+        -webkit-backdrop-filter: blur(5px); /* For Safari */
     }
     .about-text p {
         line-height: 1.5rem;
