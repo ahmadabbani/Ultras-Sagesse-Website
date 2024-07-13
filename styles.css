@@ -266,7 +266,7 @@ nav {
 }
 
 .full-about-content h2 {
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     font-size: 40px;
 }
 
@@ -972,9 +972,27 @@ audio {
     .btn{
         padding: 0.5rem 1rem;
     }
-    .full-about-content {
-        max-width: 95%;
+    .full-about-content .about-grid {
+        row-gap: 2.5rem;
+      }
+    .full-about-content h2 {
+        font-size: 30px;
     }
+    .parag {
+        line-height: 2rem;
+        font-size: 20px;
+     }
+     .full-about-content .quote blockquote {
+        font-size: 14px; 
+    }
+    .second-grid-item .about-paragraph{
+        grid-template-columns: 1fr;
+    }
+    .parag-second{
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+   
       /*songs*/
       #chants-and-songs .song-cover{
         height:600px; 
@@ -1015,7 +1033,7 @@ audio {
         top: 0;
         left: 50%;
         transform: translateX(-50%);
-        background: transparent;
+        background: rgb(255, 255, 255, 0.8);
         text-align: center;   
         z-index: 1;
         backdrop-filter: blur(10px); 
@@ -1033,8 +1051,20 @@ audio {
         font-size: 1rem;
     }
         
-    .full-about-content .quote blockquote {
-    font-size: 1rem;
+    .full-about-content .about-grid {
+        row-gap: 2rem;
+      }
+  
+    .parag {
+        font-size: 18px;
+     }
+
+    .first-grid-item .about-paragraph{
+        grid-template-columns: 1fr;
+    }
+    .parag-first{
+        padding-right: 0;
+        padding-bottom: 0.5rem;
     }
 
     .Principles-quote {
@@ -1081,7 +1111,10 @@ audio {
 
        /*contact*/
        .contact-form button {
-       margin-bottom: 1rem;
+            padding: 0.5rem 0.8rem;
+           font-size: 14px;
+            margin-bottom: 1rem;
+        
     }
 
 }
@@ -1091,21 +1124,36 @@ audio {
         font-size: 14px;
     }
      /*songs*/
-     #chants-and-songs .song-cover{
-        height:500px;
+     .chants .container{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #chants-and-songs .song-cover{
+      max-width: 60%;
+      object-fit: fill;
+      height: 500px;
+      }
+
+      .lyrics{
+        gap: 0.5rem;
       }
       .lyrics .lyricsimg{
-        height: 280px;
-     }
+         height: 400px;
+         max-width: 60%;
+         object-fit: fill;
+      }
+     
        .song-container {
-       height: 30px;
-       width: 40%;
-       top: 0; 
-       left: 0;   
+       height: 35px;
+       width: 50%;
+       top: 10px; 
+       left: 50%;
+       transform: translateX(-50%);
+       box-shadow: 0 1px 2px #0B9444;
       }
       .play-icon{
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
 }
 }
 
@@ -1132,20 +1180,14 @@ audio {
             font-size: 16px;
             line-height: 1.2rem;
         }
-        .full-about-content .sm img {
-            height: 300px;    
+  
+       .parag {
+              font-size: 16px;
+              line-height: 1.8rem;
+         }
+         .full-about-content .sm img {
+            height: 300px;
         }
-        .full-about-content .images-flex{
-                grid-template-columns: repeat(1, 1fr);
-                gap: 0.5rem;
-            }
-            .full-about-content .images-flex .grid-item:nth-child(1){
-                grid-column: 1;
-            }
-            .full-about-content .images-flex .grid-item:nth-child(2){
-                grid-column: 1;
-            }
-
             /*events*/
             .event-cards {
                 grid-template-columns: 1fr;
@@ -1162,39 +1204,27 @@ audio {
       .chant audio{
         max-width: 80%;
     }
-       /*songs*/
-       #chants-and-songs{
-       display: none;
+     /*songs*/
+    #chants-and-songs .song-cover{
+      max-width: 85%;
+      object-fit: fill;
+      height: 500px;
       }
-      .chants .container {
-        position: static;
-           }
-      .lyrics{
-       flex-direction: row;
-       gap: 1rem;
-       position: relative;
-     }
+
       .lyrics .lyricsimg{
-        height: 250px;
-     }
-     .song-container {
-        height: 15px;
-        top:0;
-        left: 50%;
-        transform: translateX(-50%);
-     }
-     .play-icon{
-        width: 15px;
-        height: 15px;
-    }
+         height: 400px;
+         max-width: 85%;
+         object-fit: fill;
+      }
+      
         /*contact*/
         .contact-form label {
             font-size: 11px;
             letter-spacing: 0.3rem;
         }
-        .contact-form button {
-            font-size: 14px;
-         }
+        .contact-form textarea {
+            margin-bottom: 0.5rem;
+        }
          .footer-title{
             font-size: 0.9rem;
         }
@@ -1207,34 +1237,24 @@ audio {
             font-size: 12px;
         }
 }
-@media screen and (max-width: 420px) {
-  /*songs*/
-  .song-container {
-    height: 13px;
-    top:0;
-    left: 50%;
-    transform: translateX(-50%);
- }
- .play-icon{
-    width: 10px;
-    height: 10px;
-}
-  .lyrics .lyricsimg{
-    height: 200px;
- }
-}
+
 @media screen and (max-width: 355px) {
      /*about*/
     .full-about-content .sm img {
         height: 200px;    
     }
-     /*songs*/
-     .lyrics .lyricsimg{
-        height: 180px;
-     }
-     #chants-and-songs .song-cover{
-         height:250px;
-       }
+       /*songs*/
+       #chants-and-songs .song-cover{
+        max-width: 85%;
+        object-fit: fill;
+        height: 400px;
+        }
+  
+        .lyrics .lyricsimg{
+           height: 350px;
+           max-width: 85%;
+           object-fit: fill;
+        }
 }
 
        

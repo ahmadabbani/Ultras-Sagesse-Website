@@ -81,7 +81,7 @@ $(document).ready(function () {
   $slider.slick({
     autoplay: true,
     pauseOnHover: false,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     fade: true,
     dots: true,
     arrows: false,
