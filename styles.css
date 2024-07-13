@@ -778,10 +778,16 @@ audio {
 
 .copyright-notice p{
     color: #e7e7e7;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.2rem;
+}
+.copyright-notice p:nth-of-type(1) {
     padding-top: 0.5rem;
 }
+.copyright-notice p:nth-of-type(2) {
+    padding-top: 0.2rem;
+}
+
 
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 1338px) {
@@ -1236,6 +1242,7 @@ audio {
         .copyright-notice p{
             font-size: 12px;
         }
+      
 }
 
 @media screen and (max-width: 355px) {
