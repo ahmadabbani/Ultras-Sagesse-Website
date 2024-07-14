@@ -75,6 +75,34 @@ function closeImage() {
   modal.style.display = "none";
 }
 
+// Update the onclick attribute for modal based on screen size
+function updateImageOnClick() {
+  var imgElements = document.querySelectorAll(".grid-item img");
+  var imageMappings = [
+    { desktop: "images/image1.jpeg", mobile: "images/image1-mobile.jpeg" },
+    { desktop: "images/image2.jpg", mobile: "images/image2-mobile.jpg" },
+    { desktop: "images/image3.jpeg", mobile: "images/image3-mobile.jpeg" },
+    { desktop: "images/image4.jpg", mobile: "images/image4-mobile.jpg" },
+    { desktop: "images/image5.jpg", mobile: "images/image5-mobile.jpg" },
+    { desktop: "images/image62.png", mobile: "images/image6-mobile.png" },
+  ];
+
+  imgElements.forEach((imgElement, index) => {
+    var desktopImageUrl = imageMappings[index].desktop;
+    var mobileImageUrl = imageMappings[index].mobile;
+
+    if (window.innerWidth <= 768) {
+      imgElement.setAttribute("onclick", `openImage('${mobileImageUrl}')`);
+    } else {
+      imgElement.setAttribute("onclick", `openImage('${desktopImageUrl}')`);
+    }
+  });
+}
+
+// Update the image onclick attribute on page load and on window resize
+window.addEventListener("load", updateImageOnClick);
+window.addEventListener("resize", updateImageOnClick);
+
 //Whatsapp message
 function sendWhatsAppMessage(productName, productPrice, imageUrl) {
   const phoneNumber = "96176585971";

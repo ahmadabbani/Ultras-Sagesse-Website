@@ -1009,19 +1009,48 @@ audio {
         padding-left: 0;
         padding-top: 0.5rem;
     }
-    .about-img1 {
-        content: url('./images/about-mobile.jpg');
+      
+      /*gallery*/
+      .gallery-img1{
+        content: url('./images/gallery1-mobile.jpeg');
       }
-      .about-img2 {
-        content: url('./images/image6-mobile.png');
+      .gallery-img2{
+        content: url('./images/gallery2-mobile.jpg');
+      }
+      .gallery-img3{
+        content: url('./images/gallery3-mobile.jpeg');
+      }
+      .gallery-img4{
+        content: url('./images/gallery4-mobile.jpg');
+      }
+      .gallery-img5{
+        content: url('./images/gallery5-mobile.jpg');
+      }
+      .gallery-img6{
+        content: url('./images/gallery6-mobile.png');
       }
    
       /*songs*/
       #chants-and-songs .song-cover{
+        content: url('./images/joe_chamoun_cover_2-mobile.jpg');
         height:600px; 
         }
+        .lyrics .lyrics1{
+            content: url('./images/lyrics1-mobile.jpg');
+          }
+          .lyrics .lyrics2{
+            content: url('./images/lyrics2-mobile.jpg');
+          }
         .lyrics .lyricsimg{
             height: 300px;
+         }
+        
+         /*merch*/
+         .merch1-mobile{
+            content: url('./images/ultras_t_shirt1-mobile.jpg');
+         }
+         .merch2-mobile{
+            content: url('./images/ultras-t-shirt2-mobile.jpg');
          }
           /*contact*/
           .contact-container{
@@ -1144,6 +1173,16 @@ audio {
 
 }
 @media screen and (max-width: 524.98px) {
+    /*hero*/
+    .hero-img1 {
+        content: url('./images/image5-xsm.jpg');
+      }
+      .hero-img2 {
+        content: url('./images/image3-xsm.jpeg');
+      }
+      .hero-img3 {
+        content: url('./images/image1-xsm.jpeg');
+      }
       /*events*/
       .event-details p {
         font-size: 14px;
@@ -1228,6 +1267,14 @@ audio {
       }
       .chant audio{
         max-width: 80%;
+    }
+    /*merch*/
+    .merch-item p{
+        font-size:medium;
+        font-weight: 500;
+    }
+    .merch-item h3{
+        font-size: 16px;
     }
      /*songs*/
     #chants-and-songs .song-cover{
