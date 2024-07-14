@@ -78,7 +78,7 @@ function closeImage() {
 //Whatsapp message
 function sendWhatsAppMessage(productName, productPrice, imageUrl) {
   const phoneNumber = "96176585971";
-  const fullImageUrl = `${window.location.origin}/${imageUrl}`;
+  const fullImageUrl = `https://ahmadabbani.github.io/${imageUrl}`;
   const message = `I'm interested in buying ${productName} for ${productPrice}. ${fullImageUrl}`;
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
