@@ -185,9 +185,20 @@ nav {
     z-index: 1;
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); /* For Safari */
-    box-shadow: 0 10px 25px #0B9444;
-    
+    box-shadow: 0 0 0 #0B9444;
+    animation: shadow-animation 1.5s infinite ;
   }
+  @keyframes shadow-animation {
+    0% {
+        box-shadow: 0 0 0 #0B9444; 
+    }
+    50% {
+        box-shadow: 0 5px 15px rgba(11, 148, 68, 0.5); /* Medium shadow */
+    }
+    100% {
+        box-shadow: 0 10px 25px rgba(11, 148, 68, 0.8); /* Full shadow effect */
+    }
+}
   
 .hero-content {
     max-width: 800px;
@@ -767,13 +778,44 @@ audio {
 }
 
 
-.contact-container .social-list li a{
-    color: #FFFFFF;
+.contact-container .social-list li a {
     text-decoration: none;
-    font-size: 23px;
+    font-size: 25px;
     padding: 0 0.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+   /* Instagram colors */
+   .contact-container .social-list li:nth-child(1) a i {
+    background: linear-gradient(45deg, #fdf497, #fd5949, #d6249f, #285AEB);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+/*Facebook colors*/
+.contact-container .social-list li:nth-child(2) a i {
+    background: linear-gradient(45deg, #4298b2, #18bff2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+/* WhatsApp colors */
+.contact-container .social-list li:nth-child(3) a i {
+    background: linear-gradient(45deg, #25D366, #34B7F1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+}
+/* TikTok colors */
+.contact-container .social-list li:nth-child(4) a i {
+    background: linear-gradient(45deg, #69C9D0, #FF216F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
 }
 
 .copyright-notice p{
@@ -1173,16 +1215,7 @@ audio {
 
 }
 @media screen and (max-width: 524.98px) {
-    /*hero*/
-    .hero-img1 {
-        content: url('./images/image5-xsm.jpg');
-      }
-      .hero-img2 {
-        content: url('./images/image3-xsm.jpeg');
-      }
-      .hero-img3 {
-        content: url('./images/image1-xsm.jpeg');
-      }
+   
       /*events*/
       .event-details p {
         font-size: 14px;

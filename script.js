@@ -105,7 +105,7 @@ window.addEventListener("resize", updateImageOnClick);
 
 //Whatsapp message
 function sendWhatsAppMessage(productName, productPrice, imageUrl) {
-  const phoneNumber = "96176585971";
+  const phoneNumber = "96171776900";
   const fullImageUrl = `https://ahmadabbani.github.io/${imageUrl}`;
   const message = `I'm interested in buying ${productName} for ${productPrice}. ${fullImageUrl}`;
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
