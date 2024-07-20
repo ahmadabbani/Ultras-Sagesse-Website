@@ -1127,9 +1127,9 @@ audio {
         padding: 1rem;
         width: 80%;
         margin: 0 auto;
-        top: 0;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
         background: rgb(255, 255, 255, 0.6);
         text-align: center;   
         z-index: 1;
@@ -1163,6 +1163,11 @@ audio {
         padding-right: 0;
         padding-bottom: 0.5rem;
     }
+
+    /* principles*/
+    .Principles-card {
+        margin-bottom: 2rem;
+      }
 
     .Principles-quote {
         font-size: 16px;
