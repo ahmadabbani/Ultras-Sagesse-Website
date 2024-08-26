@@ -32,11 +32,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Active link
 const navlink = document.querySelectorAll(".nav-link");
-function activeLink() {
+const sectionPadding = 80; // 4rem in pixels (assuming 1rem = 16px)
+
+function activeLink(e) {
+  e.preventDefault(); // Prevent default anchor behavior
+
+  // Remove active-link class from all links and add to the clicked link
   navlink.forEach((a) => a.classList.remove("active-link"));
   this.classList.add("active-link");
+
+  // Get the target section
+  const targetId = this.getAttribute("href");
+  const targetSection = document.querySelector(targetId);
+
+  // Calculate the scroll position considering the section padding
+  const scrollPosition = targetSection.offsetTop - sectionPadding;
+
+  // Scroll smoothly to the target position
+  window.scrollTo({
+    top: scrollPosition,
+    behavior: "smooth",
+  });
 }
+
 navlink.forEach((a) => a.addEventListener("click", activeLink));
+
+const sections = document.querySelectorAll("section"); // Assuming each section has a <section> tag
+const navLinks = document.querySelectorAll(".nav-link");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const navLink = document.querySelector(
+        `.nav-link[href="#${entry.target.id}"]`
+      );
+
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => link.classList.remove("active-link"));
+        if (navLink) {
+          navLink.classList.add("active-link");
+        }
+      }
+    });
+  },
+  {
+    threshold: 0.5, // Adjust as needed to determine when to activate the link (50% in view)
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
 
 //audio
 document

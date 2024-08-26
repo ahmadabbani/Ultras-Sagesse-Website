@@ -1,14 +1,13 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
-  
+
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -21,7 +20,7 @@ body {
     font-weight: 900;
     letter-spacing: 0.5rem;
     margin-bottom: 1rem;
- }
+}
 
 header {
     background-color: white;
@@ -29,7 +28,7 @@ header {
     transition: 0.3s;
 }
 
-.scroll-header{
+.scroll-header {
     position: fixed;
     box-shadow: 0 5px 8px 0 rgb(0 0 0 / 15%);
     z-index: 999;
@@ -38,9 +37,10 @@ header {
     padding-bottom: 1.25rem;
 }
 
-.scroll-header nav{
+.scroll-header nav {
     justify-content: center;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ nav {
     border-radius: 50%;
 }
 
-.remove-logo{
+.remove-logo {
     display: none;
 }
 
@@ -68,7 +68,7 @@ nav {
     margin-right: 1rem;
 }
 
-.nav-link:after{
+.nav-link:after {
     content: "";
     position: absolute;
     width: 0;
@@ -77,30 +77,30 @@ nav {
     bottom: -15px;
     left: 50%;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  }
+}
 
-  .nav-link:hover:after{
-    width:50%;
+.nav-link:hover:after {
+    width: 50%;
     left: 25%;
     right: 25%;
-  }
+}
 
 .nav-links li a {
     position: relative;
     color: #0B9444;
     text-decoration: none;
-    padding:0 0.5rem;
+    padding: 0 0.5rem;
     font-size: 20px;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.active-link{
+.active-link {
     opacity: 0.4;
 }
 
 .burger {
-    display: none; 
+    display: none;
     cursor: pointer;
 }
 
@@ -128,7 +128,7 @@ nav {
 
 .slick-slider .slick-slide {
     transition: opacity 1s ease-in-out !important;
-  }  
+}
 
 .slick-slide img {
     width: 100%;
@@ -136,20 +136,20 @@ nav {
     max-height: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
 
-  .slider .slick-dots li button:before {
+.slider .slick-dots li button:before {
     font-size: 16px !important;
     color: #ffffff !important;
     opacity: 1 !important;
-  }
-  
-  .slider .slick-dots li.slick-active button:before {
+}
+
+.slider .slick-dots li.slick-active button:before {
     color: #0B9444 !important;
     opacity: 1 !important;
-  }
-  
-  .slider .slick-dots {
+}
+
+.slider .slick-dots {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -158,17 +158,17 @@ nav {
     width: fit-content;
     flex-direction: column;
     justify-content: center;
-  }
+}
 
-  .slider .slick-dots li {
+.slider .slick-dots li {
     margin: 5px 0 !important;
-  }  
+}
 
-  .main-slide{
+.main-slide {
     position: relative;
-  }
+}
 
-  .slide-title {
+.slide-title {
     position: absolute;
     top: 10px;
     left: 50%;
@@ -183,36 +183,43 @@ nav {
     font-style: italic;
     letter-spacing: 0.3rem;
     z-index: 1;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
     box-shadow: 0 0 0 #0B9444;
-    animation: shadow-animation 1.5s infinite ;
-  }
-  @keyframes shadow-animation {
+    animation: shadow-animation 1.5s infinite;
+}
+
+@keyframes shadow-animation {
     0% {
-        box-shadow: 0 0 0 #0B9444; 
+        box-shadow: 0 0 0 #0B9444;
     }
+
     50% {
-        box-shadow: 0 5px 15px rgba(11, 148, 68, 0.5); /* Medium shadow */
+        box-shadow: 0 5px 15px rgba(11, 148, 68, 0.5);
+        /* Medium shadow */
     }
+
     100% {
-        box-shadow: 0 10px 25px rgba(11, 148, 68, 0.8); /* Full shadow effect */
+        box-shadow: 0 10px 25px rgba(11, 148, 68, 0.8);
+        /* Full shadow effect */
     }
 }
-  
+
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
 }
 
 .about {
-    background-color: #F0F0F0;;
+    background-color: #F0F0F0;
     color: #000000;
-    padding: 4rem 0 4rem 0;
+    padding: 2rem 0 2rem 0;
+    margin: 6rem 0 3rem 0;
 }
 
 .about-content {
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 
@@ -227,9 +234,9 @@ nav {
 }
 
 .about-text p {
-   line-height: 2.5rem;
-   font-size: 22px;
-   margin-bottom: 1rem;
+    line-height: 2.5rem;
+    font-size: 22px;
+    margin-bottom: 1rem;
 }
 
 .about-image {
@@ -246,7 +253,7 @@ nav {
 }
 
 .btn {
-    display:block;
+    display: block;
     background-color: #0B9444;
     color: #FFFFFF;
     padding: 0.75rem 1.5rem;
@@ -264,7 +271,7 @@ nav {
 /*full about*/
 .full-about {
     padding: 2rem 0 2rem 0;
-    background-color: #FFFFFF;  
+    background-color: #FFFFFF;
 }
 
 .full-about-content {
@@ -272,7 +279,7 @@ nav {
     text-align: justify;
 }
 
-.full-about-content .btn{
+.full-about-content .btn {
     margin-top: 1.5rem;
 }
 
@@ -282,40 +289,69 @@ nav {
 }
 
 .parag {
-   line-height: 2.5rem;
-   font-size: 22px;
-   color: #0B9444;
-   display: flex;
-   align-items: center;
-   height: 100%;
+    line-height: 2.5rem;
+    font-size: 22px;
+    color: #0B9444;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
-.parag-first{
+.flex span {
+    margin-top: 3rem;
+    color: #0B9444;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    border-left: 3px solid #0B9444;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.parag-first {
     padding-right: 2rem;
+    padding-bottom: 6rem;
+
 }
 
-.parag-second{
+.parag-second {
     padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.span-flex span {
+    margin-top: 2rem;
+    color: #0B9444;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    border-left: 3px solid #0B9444;
+    display: flex;
+    align-items: center;
 }
 
 .full-about-content .about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
 }
 
-.first-grid-item{
+.first-grid-item {
     grid-column: span 2;
 }
 
-.second-grid-item{
+.second-grid-item {
     grid-column: span 2;
 }
 
-.about-paragraph{
+.about-paragraph {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+
 
 .full-about-content .quote {
     margin: 0 auto;
@@ -342,6 +378,10 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.full-about-content .first img {
+    height: 350px;
+}
+
 /*events*/
 .events {
     background-color: #F0F0F0;
@@ -349,7 +389,7 @@ nav {
     text-align: center;
 }
 
-.events-container{
+.events-container {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: start;
@@ -363,22 +403,26 @@ nav {
     gap: 1rem;
 }
 
-.events-container .events-image img{
-   max-width: 100%;
-   width: 100%;
-   max-height: 550px;
-   object-fit: cover;
-   border-radius: 12px;
+.events-container .events-image img {
+    max-width: 100%;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
 .event-card {
-    color:#FFFFFF;
+    color: #FFFFFF;
     background-color: #0B9444;
     border-radius: 12px;
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     padding: 1rem 0;
+}
+
+.blur-event {
+    filter: blur(5px);
 }
 
 .event-card:hover {
@@ -413,7 +457,7 @@ nav {
     display: inline-block;
     margin-top: 0.5rem;
     border-radius: 5px;
-    transition:  0.3s ease;
+    transition: 0.3s ease;
 }
 
 .event-details .btn:hover {
@@ -421,128 +465,103 @@ nav {
     color: #FFFFFF;
 }
 
-.Principles{
+.Principles {
     padding: 4rem 0;
     text-align: center;
-  }
+}
 
 .Principles-card {
-    max-height: 120px !important;
-    height: 120px !important;
+    max-height: 140px !important;
+    height: 140px !important;
     display: flex !important;
     flex-direction: column !important;
-    padding: 0.5rem 0;
+    padding: 0.75rem 0 0.5rem 0;
     color: #ffffff;
     text-align: center;
     margin: 0 15px;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgb(11, 148, 68, 0.4);
     background-color: #006838;
     border: 1px solid #006838;
     margin-bottom: 4rem;
-  }
+}
 
-  .Principles-quote {
+.Principles-quote {
     font-style: italic;
     font-size: 16px;
     padding: 1rem 1rem 0 1rem;
-    
-  }
 
-  .Principles-title {
+}
+
+.Principles-title {
     font-weight: 900;
     font-size: 20px;
-  }
-  
+}
+
 .gallery {
     padding: 4rem 0;
     text-align: center;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
     width: 90%;
     margin: auto;
-  }
+}
 
-  .grid-container .grid-item{
+.grid-container .grid-item {
     padding: 10px;
     border-radius: 12px;
+    flex-basis: 30%;
     transition: all 0.5s;
-  }
+    margin: 0 auto;
+}
 
-  .grid-container .grid-item:hover{
+.grid-container .grid-item:hover {
     transform: scale(101%);
-    box-shadow: 3px 3px 8px  #006838;;
-  }
+    box-shadow: 3px 3px 8px #006838;
+    ;
+}
 
-  .grid-container .grid-item:nth-child(1) {
-    grid-column: 1 / span 2;
-  }
-
-  .grid-container .grid-item:nth-child(2) {
-    grid-column: 3 / span 2;
-  }
-
-  .grid-container .grid-item:nth-child(3) {
-    grid-column: 1 / span 2;
-    grid-row: 2;
-  }
-
-  .grid-container .grid-item:nth-child(4) {
-    grid-column: 3 / span 2;
-    grid-row: 2;
-  }
-
-  .grid-container .grid-item:nth-child(5) {
-    grid-column: 1 / span 2;
-    grid-row: 3;
-  }
-
-  .grid-container .grid-item:nth-child(6) {
-    grid-column: 3 / span 2;
-    grid-row: 3;
-  }
-
-  .grid-container .grid-item img{
+.grid-container .grid-item img {
     width: 100%;
     height: 100%;
     cursor: pointer;
     display: block;
     border-radius: 12px;
-  }
+}
 
-  .modal {
-    display: none; 
+.modal {
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); 
+    background-color: rgba(0, 0, 0, 0.9);
     overflow: auto;
     align-items: center;
-  }
-  
-  .modal-content {
+}
+
+.modal-content {
     margin: auto;
     display: block;
-    width: 90vw; 
-    height: 90vh; 
+    width: 90vw;
+    height: 90vh;
     border-radius: 12px;
-  }
-  
-  .close {
+}
+
+.close {
     position: absolute;
     top: 30px;
     right: 30px;
     font-size: 30px;
     color: #fff;
     cursor: pointer;
-  }
+}
 
 .chants {
     background-color: #FFFFFF;
@@ -550,24 +569,24 @@ nav {
     text-align: center;
 }
 
-.chants .container{
+.chants .container {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     gap: 2rem;
 }
 
-#chants-and-songs { 
+#chants-and-songs {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#chants-and-songs .song-cover{
-  max-width: 100%;
-  width: 100%;
-  height:650px;
-  border-radius: 12px;
-  object-fit: cover;
+#chants-and-songs .song-cover {
+    max-width: 100%;
+    width: 100%;
+    height: 650px;
+    border-radius: 12px;
+    object-fit: cover;
 }
 
 audio {
@@ -587,27 +606,28 @@ audio {
     left: 50%;
     transform: translateX(-50%);
     background: transparent;
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* For Safari */
     box-shadow: 0 1px 5px #0B9444;
 }
 
 
-.play-icon{
+.play-icon {
     display: block;
     width: 45px;
     height: 45px;
     cursor: pointer;
 }
 
-.lyrics{
-   display: flex;
-   align-items: center;
-   gap: 2rem;
-   position: relative;
+.lyrics {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
 }
 
-.lyrics .lyricsimg{
+.lyrics .lyricsimg {
     max-width: 100%;
     width: 100%;
     height: 500px;
@@ -637,24 +657,34 @@ audio {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     border-radius: 12px;
+    filter: blur(5px);
+    opacity: 0.8;
 }
 
-.merch-item h3{
+.availability-info {
+    display: block;
+    font-size: 0.9rem;
+    color: #535353;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.merch-item h3 {
     font-weight: 900;
     font-size: 22px;
     letter-spacing: 0.2rem;
 }
 
-.merch-item p{
-    font-size:x-large;
+.merch-item p {
+    font-size: x-large;
 }
 
-.merch-item .btn{
+.merch-item .btn {
     margin: 0.5rem auto 0 auto;
 }
 
-.merch-item img{
-   max-width: 100%;
+.merch-item img {
+    max-width: 100%;
 }
 
 .contact {
@@ -662,33 +692,33 @@ audio {
     text-align: center;
 }
 
-.contact .title-color{
+.contact .title-color {
     color: #FFFFFF;
 }
 
-.contact .footer-main-title{
+.contact .footer-main-title {
     padding-top: 2rem;
     padding-bottom: 1rem;
 }
 
-.contact-container{
+.contact-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
-.contact-container .contact-flex-left{
+.contact-container .contact-flex-left {
     padding: 0;
     grid-row: 1;
 }
 
-.contact-container .contact-flex-left img{
+.contact-container .contact-flex-left img {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
 }
 
-.contact-flex-right{
+.contact-flex-right {
     background-color: #006838;
     display: flex;
     flex-direction: column;
@@ -696,7 +726,7 @@ audio {
     justify-content: space-between;
 }
 
-.footer-title{
+.footer-title {
     font-size: 1rem;
 }
 
@@ -710,11 +740,11 @@ audio {
     font-size: 14px;
 }
 
-.contact-form  .message-label{
+.contact-form .message-label {
     margin-bottom: 0.5rem;
 }
 
-.contact-form input{
+.contact-form input {
     border-radius: 0;
     border: none;
     border-bottom: 2px solid #FFFFFF;
@@ -723,7 +753,7 @@ audio {
 
 .contact-form input,
 .contact-form textarea {
-    padding:  0 0.5rem;
+    padding: 0 0.5rem;
     margin-bottom: 1.5rem;
     outline: none;
     color: #FFFFFF;
@@ -736,7 +766,7 @@ audio {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  width: 100%;
+    width: 100%;
 }
 
 .contact-form textarea {
@@ -750,6 +780,7 @@ audio {
     color: #FFFFFF;
     padding: 0.75rem 1rem;
     font-size: 16px;
+    font-weight: 600;
     border: 2px solid #FFFFFF;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -760,7 +791,7 @@ audio {
     opacity: 0.7;
 }
 
-.contact-container .social-list{
+.contact-container .social-list {
     list-style-type: none;
     display: flex;
     margin: 0;
@@ -768,11 +799,11 @@ audio {
     justify-content: center;
 }
 
-.contact-container .social-list li{
+.contact-container .social-list li {
     transition: 0.3s ease;
 }
 
-.contact-container .social-list li:hover{
+.contact-container .social-list li:hover {
     opacity: 0.8;
     transform: translateY(-3px);
 }
@@ -785,47 +816,37 @@ audio {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-   /* Instagram colors */
-   .contact-container .social-list li:nth-child(1) a i {
-    background: linear-gradient(45deg, #fdf497, #fd5949, #d6249f, #285AEB);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-}
-/*Facebook colors*/
-.contact-container .social-list li:nth-child(2) a i {
-    background: linear-gradient(45deg, #4298b2, #18bff2);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-}
-/* WhatsApp colors */
-.contact-container .social-list li:nth-child(3) a i {
-    background: linear-gradient(45deg, #25D366, #34B7F1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-}
-/* TikTok colors */
-.contact-container .social-list li:nth-child(4) a i {
-    background: linear-gradient(45deg, #69C9D0, #FF216F);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
+
+/* Instagram colors */
+.contact-container .social-list li:nth-child(1) a i {
+    color: #FFFFFF;
 }
 
-.copyright-notice p{
+/*Facebook colors*/
+.contact-container .social-list li:nth-child(2) a i {
+    color: #FFFFFF;
+}
+
+/* WhatsApp colors */
+.contact-container .social-list li:nth-child(3) a i {
+    color: #FFFFFF;
+}
+
+/* TikTok colors */
+.contact-container .social-list li:nth-child(4) a i {
+    color: #FFFFFF;
+}
+
+.copyright-notice p {
     color: #e7e7e7;
     font-size: 13px;
     letter-spacing: 0.2rem;
 }
+
 .copyright-notice p:nth-of-type(1) {
     padding-top: 0.5rem;
 }
+
 .copyright-notice p:nth-of-type(2) {
     padding-top: 0.2rem;
 }
@@ -834,20 +855,22 @@ audio {
 /* Media Queries */
 @media screen and (max-width: 1338px) {
     .event-cards {
-    grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 1231px) {
-    .lyrics .lyricsimg{
-       height: 400px;
+    .lyrics .lyricsimg {
+        height: 400px;
     }
-    #chants-and-songs .song-cover{
-        height:550px;
-      }
+
+    #chants-and-songs .song-cover {
+        height: 550px;
+    }
 }
+
 @media screen and (max-width: 1024px) {
-    .nav-links { 
+    .nav-links {
         flex-direction: column;
         text-align: center;
         width: 100%;
@@ -861,8 +884,8 @@ audio {
         transition: all 0.3s ease;
     }
 
-    .nav-position{
-        top: calc(24px + 2.5rem) ; 
+    .nav-position {
+        top: calc(24px + 2.5rem);
     }
 
     .nav-links.active {
@@ -871,7 +894,7 @@ audio {
         z-index: 999;
     }
 
-    .nav-link:after{
+    .nav-link:after {
         bottom: -5px;
     }
 
@@ -880,12 +903,12 @@ audio {
         margin-right: 0;
     }
 
-    .scroll-header nav{
+    .scroll-header nav {
         justify-content: right;
     }
 
-    .burger  {
-        display: block; 
+    .burger {
+        display: block;
     }
 
     .burger.toggle .line1 {
@@ -901,227 +924,290 @@ audio {
     }
 
     /*home*/
-  .slide-title {
-   width: 70%;
-  }
+    .slide-title {
+        width: 70%;
+    }
 
-  /*songs*/
-  .lyrics .lyricsimg{
-   height: 350px;
-}
-#chants-and-songs .song-cover{
-    height:450px;
-  }
-  .song-container {
-    height: 40px;
-    top: 5px;
-  }
-  .play-icon{
-    width: 28px;
-    height: 28px;
-}
+    /*values*/
+    .Principles-card {
+        max-height: 160px !important;
+        height: 160px !important;
+    }
 
-  /*contact*/
-    .contact-container .contact-flex-left img{
+    /*songs*/
+    .lyrics .lyricsimg {
+        height: 350px;
+    }
+
+    #chants-and-songs .song-cover {
+        height: 450px;
+    }
+
+    .song-container {
+        height: 40px;
+        top: 5px;
+    }
+
+    .play-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    /*contact*/
+    .contact-container .contact-flex-left img {
         object-fit: cover;
     }
 }
 
+@media screen and (max-width: 850px) {
+
+    /*values*/
+    .Principles-card {
+        max-height: 185px !important;
+        height: 185px !important;
+    }
+}
+
 @media screen and (max-width: 920px) {
-     /*home*/
-     .slider {
+
+    /*home*/
+    .slider {
         max-height: 600px;
         height: 600px;
-    }  
-    
+    }
+
     .slick-slide img {
         max-height: 600px;
         height: 600px;
-      }
-      .slide-title {
-       font-size:2.1rem;
-       padding: 1.2rem 1.2rem;
-       }
+    }
+
+    .slide-title {
+        font-size: 2.1rem;
+        padding: 1.2rem 1.2rem;
+    }
 
     /*about*/
     .about-text p {
         line-height: 2rem;
-     }
-     .full-about-content .quote {
+    }
+
+    .full-about-content .quote {
         width: 100%;
     }
 
     /*events*/
-    .events-container .events-image{
+    .events-container .events-image {
         display: none;
     }
-    .events-container{
+
+    .events-container {
         grid-template-columns: 1fr;
     }
 
-    /*gallery*/
-    .grid-container {
-        gap: 5px;
+    /*songs*/
+    .chants .container {
+        position: relative;
     }
 
-     /*songs*/
-     .chants .container {
-        position: relative;
-           }
-     .lyrics{
-       justify-content: center;
+    .lyrics {
+        justify-content: center;
         flex-direction: column;
         position: static;
-     }
-     .lyrics .lyricsimg{
+    }
+
+    .lyrics .lyricsimg {
         height: 400px;
-     }
-     #chants-and-songs .song-cover{
-         height:800px;
-       }
-     
-       .song-container {
-       width: 30%;
-       top: 25px;
-       left: 4rem;
-       transform: translateX(0);
-      }
+    }
+
+    #chants-and-songs .song-cover {
+        height: 800px;
+    }
+
+    .song-container {
+        width: 30%;
+        top: 25px;
+        left: 4rem;
+        transform: translateX(0);
+    }
 
 }
+
 @media screen and (max-width: 768px) {
+
     /*home*/
     .slider {
-        
+
         height: auto;
-    }  
+    }
+
     .hero-img1 {
         content: url('./images/image5-mobile.jpg');
-      }
-      .hero-img2 {
+    }
+
+    .hero-img2 {
         content: url('./images/image3-mobile.jpeg');
-      }
-      .hero-img3 {
+    }
+
+    .hero-img3 {
         content: url('./images/image1-mobile.jpeg');
-      }
+    }
+
     .slick-slide img {
-      
+
         height: auto;
-      }
-      .slide-title {
-        font-size:1.6rem;
+    }
+
+    .slide-title {
+        font-size: 1.6rem;
         width: 80%;
-        }
-    
+    }
+
     /*about*/
     .about {
         padding: 2rem 0 2rem 0;
+        margin: 2rem 0 0 0;
     }
+
     .about-text {
         padding: 0 1rem 0 1rem;
     }
+
     .about-text h2 {
         margin-bottom: 0.5rem;
     }
+
     .about-text p {
         font-size: 18px;
     }
-     .about-image {
+
+    .about-image {
         height: 400px;
     }
-    .btn{
+
+    .btn {
         padding: 0.5rem 1rem;
     }
+
     .full-about-content .about-grid {
         row-gap: 2.5rem;
-      }
+    }
+
     .full-about-content h2 {
         font-size: 30px;
     }
+
     .parag {
         line-height: 2rem;
         font-size: 20px;
-     }
-     .full-about-content .quote blockquote {
-        font-size: 14px; 
     }
-    .second-grid-item .about-paragraph{
+
+    .full-about-content .quote blockquote {
+        font-size: 14px;
+    }
+
+    .second-grid-item .about-paragraph {
         grid-template-columns: 1fr;
     }
-    .parag-second{
+
+    .parag-second {
         padding-left: 0;
         padding-top: 0.5rem;
     }
-      
-      /*gallery*/
-      .gallery-img1{
+
+    /*gallery*/
+    .gallery-img1 {
         content: url('./images/gallery1-mobile.jpeg');
-      }
-      .gallery-img2{
+    }
+
+    .gallery-img2 {
         content: url('./images/gallery2-mobile.jpg');
-      }
-      .gallery-img3{
+    }
+
+    .gallery-img3 {
         content: url('./images/gallery3-mobile.jpeg');
-      }
-      .gallery-img4{
+    }
+
+    .gallery-img4 {
         content: url('./images/gallery4-mobile.jpg');
-      }
-      .gallery-img5{
+    }
+
+    .gallery-img5 {
         content: url('./images/gallery5-mobile.jpg');
-      }
-      .gallery-img6{
+    }
+
+    .gallery-img6 {
         content: url('./images/gallery6-mobile.png');
-      }
-   
-      /*songs*/
-      #chants-and-songs .song-cover{
+    }
+
+    .grid-container {
+        width: 95%;
+    }
+
+    .grid-container .grid-item {
+        flex-basis: 50%;
+    }
+
+    /*songs*/
+    #chants-and-songs .song-cover {
         content: url('./images/joe_chamoun_cover_2-mobile.jpg');
-        height:600px; 
-        }
-        .lyrics .lyrics1{
-            content: url('./images/lyrics1-mobile.jpg');
-          }
-          .lyrics .lyrics2{
-            content: url('./images/lyrics2-mobile.jpg');
-          }
-        .lyrics .lyricsimg{
-            height: 300px;
-         }
-        
-         /*merch*/
-         .merch1-mobile{
-            content: url('./images/ultras_t_shirt1-mobile.jpg');
-         }
-         .merch2-mobile{
-            content: url('./images/ultras-t-shirt2-mobile.jpg');
-         }
-          /*contact*/
-          .contact-container{
-            grid-template-columns: 1fr;
-        }
-      .contact-container .contact-flex-left{
+        height: 600px;
+    }
+
+    .lyrics .lyrics1 {
+        content: url('./images/lyrics1-mobile.jpg');
+    }
+
+    .lyrics .lyrics2 {
+        content: url('./images/lyrics2-mobile.jpg');
+    }
+
+    .lyrics .lyricsimg {
+        height: 300px;
+    }
+
+    /*merch*/
+    .merch1-mobile {
+        content: url('./images/ultras_t_shirt1-mobile.jpg');
+    }
+
+    .merch2-mobile {
+        content: url('./images/ultras-t-shirt2-mobile.jpg');
+    }
+
+    /*contact*/
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container .contact-flex-left {
         display: none;
     }
-    .copyright-notice p{
+
+    .copyright-notice p {
         font-size: 11px;
     }
 }
+
 @media screen and (max-width: 577px) {
 
     /*home*/
     .slide-title {
         padding: 0.8rem;
-        }
-        .slider .slick-dots li button:before {
-            font-size: 12px !important;
-        }
-        .slider .slick-dots li {
-            margin: 2px 0 !important;
-          } 
+    }
 
-        /*about*/
-     .about-content {
+    .slider .slick-dots li button:before {
+        font-size: 12px !important;
+    }
+
+    .slider .slick-dots li {
+        margin: 2px 0 !important;
+    }
+
+    /*about*/
+    .about-content {
         position: relative;
     }
+
     .about .about-text {
         position: absolute;
         padding: 1rem;
@@ -1131,246 +1217,320 @@ audio {
         left: 50%;
         transform: translate(-50%, -50%);
         background: rgb(255, 255, 255, 0.6);
-        text-align: center;   
+        text-align: center;
         z-index: 1;
-        backdrop-filter: blur(5px); 
-        -webkit-backdrop-filter: blur(5px); /* For Safari */
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        /* For Safari */
     }
+
     .about-text p {
         line-height: 1.5rem;
-     }
+    }
+
     .about-image {
         width: 100%;
         padding: 0 0.5rem;
     }
-    .btn{
+
+    .btn {
         padding: 0.5rem 0.75rem;
         font-size: 1rem;
     }
-        
+
     .full-about-content .about-grid {
-        row-gap: 2rem;
-      }
-  
+        row-gap: 3rem;
+    }
+
     .parag {
         font-size: 18px;
-     }
+    }
 
-    .first-grid-item .about-paragraph{
+    .first-grid-item .about-paragraph {
         grid-template-columns: 1fr;
     }
-    .parag-first{
+
+    .parag-first {
         padding-right: 0;
-        padding-bottom: 0.5rem;
     }
 
-    /* principles*/
+    .flex span {
+        margin-top: 1rem;
+        color: #0B9444;
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-left: 1rem;
+        border-left: 3px solid #0B9444;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+    }
+
+    .parag-first {
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+
+    }
+
+    .parag-second {
+        padding-left: 0;
+        padding-bottom: 3rem;
+        padding-top: 0 !important;
+    }
+
+    .span-flex span {
+        margin-top: 2rem;
+        color: #0B9444;
+        font-size: 1.3rem;
+        margin-left: 0;
+        font-weight: 600;
+        padding-left: 1rem;
+        border-left: 3px solid #0B9444;
+        display: flex;
+        align-items: center;
+    }
+
+    /*values*/
     .Principles-card {
-        margin-bottom: 2rem;
-      }
+        max-height: 155px !important;
+        height: 155px !important;
+        margin-bottom: 1.5rem;
+    }
 
     .Principles-quote {
         font-size: 16px;
         letter-spacing: 0.1rem;
-      }
-    
-      .Principles-title {
+    }
+
+    .Principles-title {
         font-size: 20px;
         letter-spacing: 0.1rem;
-      }
+    }
 
-      /*gallery*/
-      .modal-content {
-        height: 70vh; 
-      }
-      .grid-container .grid-item{
+    /*gallery*/
+    .modal-content {
+        height: 70vh;
+    }
+
+    .grid-container .grid-item {
         padding: 5px;
-      }
+    }
 
-      /*merchandise*/
+    /*merchandise*/
     .merchandise-grid {
         grid-template-columns: 1fr;
     }
-    
+
     /*events*/
     .event-cards {
         gap: 0.5rem;
     }
+
     .event-details h3 {
         letter-spacing: 0.1rem;
         font-size: 18px;
     }
+
     .event-details p {
         font-size: 16px;
         letter-spacing: 0.1rem;
     }
-    .merch-item h3{
+
+    .merch-item h3 {
         font-size: 18px;
     }
-     .merch-item img{
-        max-height: 250px;
-     }
 
-       /*contact*/
-       .contact-form button {
-            padding: 0.5rem 0.8rem;
-           font-size: 14px;
-            margin-bottom: 1rem;  
+    .merch-item img {
+        max-height: 250px;
+    }
+
+    /*contact*/
+    .contact-form button {
+        padding: 0.5rem 0.8rem;
+        font-size: 14px;
+        margin-bottom: 1rem;
     }
 
 }
+
 @media screen and (max-width: 524.98px) {
-   
-      /*events*/
-      .event-details p {
+
+    /*events*/
+    .event-details p {
         font-size: 14px;
     }
-     /*songs*/
-     .chants .container{
+
+    /*songs*/
+    .chants .container {
         flex-direction: column;
         gap: 0.5rem;
     }
-    #chants-and-songs .song-cover{
-      max-width: 60%;
-      object-fit: fill;
-      height: 500px;
-      }
 
-      .lyrics{
+    #chants-and-songs .song-cover {
+        max-width: 60%;
+        object-fit: fill;
+        height: 500px;
+    }
+
+    .lyrics {
         gap: 0.5rem;
-      }
-      .lyrics .lyricsimg{
-         height: 400px;
-         max-width: 60%;
-         object-fit: fill;
-      }
-     
-       .song-container {
-       height: 35px;
-       width: 50%;
-       top: 10px; 
-       left: 50%;
-       transform: translateX(-50%);
-       box-shadow: 0 1px 2px #0B9444;
-      }
-      .play-icon{
+    }
+
+    .lyrics .lyricsimg {
+        height: 400px;
+        max-width: 60%;
+        object-fit: fill;
+    }
+
+    .song-container {
+        height: 35px;
+        width: 50%;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 1px 2px #0B9444;
+    }
+
+    .play-icon {
         width: 30px;
         height: 30px;
-}
+    }
 }
 
 @media screen and (max-width: 480px) {
-      /*home*/
-      .slider {
+
+    /*home*/
+    .slider {
         max-height: 400px;
         height: 400px;
-       }  
-       .slick-slide img {
+    }
+
+    .slick-slide img {
         max-height: 400px;
         height: 400px;
-       }
-       .slide-title {
-        font-size: 1.3rem ;
+    }
+
+    .slide-title {
+        font-size: 1.3rem;
         width: 90%;
-        }
-        .title-color {
-           font-size: 1.2rem;
-        }
+    }
 
-        /*about*/
-        .about-text p {
-            font-size: 16px;
-            line-height: 1.2rem;
-        }
-  
-       .parag {
-              font-size: 16px;
-              line-height: 1.8rem;
-         }
-         .full-about-content .sm img {
-            height: 300px;
-        }
-            /*events*/
-            .event-cards {
-                grid-template-columns: 1fr;
-            }
-            .event-details p {
-                padding: 0;
-            }
+    .title-color {
+        font-size: 1.2rem;
+    }
 
-         /*gallery*/
-      .modal-content {
-        width: 95vw; 
-        height: 50vh; 
-      }
-      .chant audio{
+    /*about*/
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.2rem;
+    }
+
+    .parag {
+        font-size: 16px;
+        line-height: 1.8rem;
+    }
+
+    .full-about-content .sm img {
+        height: 300px;
+    }
+
+    /*events*/
+    .event-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .event-details p {
+        padding: 0;
+    }
+
+    /*gallery*/
+    .modal-content {
+        width: 95vw;
+        height: 50vh;
+    }
+
+    .chant audio {
         max-width: 80%;
     }
+
     /*merch*/
-    .merch-item p{
-        font-size:medium;
+    .merch-item p {
+        font-size: medium;
         font-weight: 500;
     }
-    .merch-item h3{
+
+    .merch-item h3 {
         font-size: 16px;
     }
-     /*songs*/
-    #chants-and-songs .song-cover{
-      max-width: 85%;
-      object-fit: fill;
-      height: 500px;
-      }
 
-      .lyrics .lyricsimg{
-         height: 400px;
-         max-width: 85%;
-         object-fit: fill;
-      }
-      
-        /*contact*/
-        .contact-form label {
-            font-size: 11px;
-            letter-spacing: 0.3rem;
-        }
-        .contact-form textarea {
-            margin-bottom: 0.5rem;
-        }
-        .contact-form button {
-            padding: 0.4rem 0.6rem;
-           font-size: 12px;
+    /*songs*/
+    #chants-and-songs .song-cover {
+        max-width: 85%;
+        object-fit: fill;
+        height: 500px;
     }
-         .footer-title{
-            font-size: 0.9rem;
-        }
-        .contact-container .social-list li a{
-            font-size: 18px;
-            padding: 0 0.35rem;
-        }
-        
-        .copyright-notice p{
-            font-size: 10px;
-            letter-spacing: 0.1rem;
-        }
-      
+
+    .lyrics .lyricsimg {
+        height: 400px;
+        max-width: 85%;
+        object-fit: fill;
+    }
+
+    /*contact*/
+    .contact-form label {
+        font-size: 11px;
+        letter-spacing: 0.3rem;
+    }
+
+    .contact-form textarea {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-form button {
+        padding: 0.4rem 0.6rem;
+        font-size: 12px;
+    }
+
+    .footer-title {
+        font-size: 0.9rem;
+    }
+
+    .contact-container .social-list li a {
+        font-size: 18px;
+        padding: 0 0.35rem;
+    }
+
+    .copyright-notice p {
+        font-size: 10px;
+        letter-spacing: 0.1rem;
+    }
+
 }
 
 @media screen and (max-width: 355px) {
-     /*about*/
+
+    /*about*/
     .full-about-content .sm img {
-        height: 200px;    
+        height: 200px;
     }
-       /*songs*/
-       #chants-and-songs .song-cover{
+
+    /*values*/
+    .Principles-card {
+        max-height: 165px !important;
+        height: 165px !important;
+        margin-bottom: 1.5rem;
+    }
+
+    /*songs*/
+    #chants-and-songs .song-cover {
         max-width: 85%;
         object-fit: fill;
         height: 400px;
-        }
-  
-        .lyrics .lyricsimg{
-           height: 350px;
-           max-width: 85%;
-           object-fit: fill;
-        }
-}
+    }
 
-       
+    .lyrics .lyricsimg {
+        height: 350px;
+        max-width: 85%;
+        object-fit: fill;
+    }
+}
