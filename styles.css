@@ -421,10 +421,6 @@ nav {
     padding: 1rem 0;
 }
 
-.blur-event {
-    filter: blur(5px);
-}
-
 .event-card:hover {
     transform: translateY(-5px);
 }
