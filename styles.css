@@ -653,8 +653,6 @@ audio {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 auto;
     border-radius: 12px;
-    filter: blur(5px);
-    opacity: 0.8;
 }
 
 .availability-info {
@@ -669,10 +667,14 @@ audio {
     font-weight: 900;
     font-size: 22px;
     letter-spacing: 0.2rem;
+    filter: blur(5px);
+    opacity: 0.8;
 }
 
 .merch-item p {
     font-size: x-large;
+    filter: blur(5px);
+    opacity: 0.8;
 }
 
 .merch-item .btn {
@@ -681,6 +683,8 @@ audio {
 
 .merch-item img {
     max-width: 100%;
+    filter: blur(8px);
+    opacity: 0.8;
 }
 
 .contact {
