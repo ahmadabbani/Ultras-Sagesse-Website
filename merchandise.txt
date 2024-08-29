@@ -1,3 +1,0 @@
- onclick="sendWhatsAppMessage('Merch Item 1', '$19.99', 'Ultras-Sagesse-Website/images/ultras-t-shirt1.jpg')"
-
-onclick="sendWhatsAppMessage('Merch Item 2', '$24.99', 'Ultras-Sagesse-Website/images/ultras-t-shirt2.jpg')"
