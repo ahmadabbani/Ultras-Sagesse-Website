@@ -851,6 +851,7 @@ audio {
     display: inline;
     color: #e7e7e7;
     font-size: 13px;
+    font-weight: 900;
     letter-spacing: 0.2rem;
     text-decoration: none;
 }
