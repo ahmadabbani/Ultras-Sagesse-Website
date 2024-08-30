@@ -843,6 +843,18 @@ audio {
     letter-spacing: 0.2rem;
 }
 
+.copyright-notice .made-by {
+    display: inline;
+}
+
+.copyright-notice .made-by-url {
+    display: inline;
+    color: #e7e7e7;
+    font-size: 13px;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+}
+
 .copyright-notice p:nth-of-type(1) {
     padding-top: 0.5rem;
 }
@@ -1186,6 +1198,10 @@ audio {
     .copyright-notice p {
         font-size: 11px;
     }
+
+    .copyright-notice .made-by-url {
+        font-size: 11px;
+    }
 }
 
 @media screen and (max-width: 577px) {
@@ -1510,6 +1526,11 @@ audio {
     }
 
     .copyright-notice p {
+        font-size: 10px;
+        letter-spacing: 0.1rem;
+    }
+
+    .copyright-notice .made-by-url {
         font-size: 10px;
         letter-spacing: 0.1rem;
     }
