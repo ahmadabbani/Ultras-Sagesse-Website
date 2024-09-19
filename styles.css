@@ -894,6 +894,21 @@ audio {
 
 /* Media Queries */
 @media screen and (min-width: 1800px) {
+    .nav-links li a {
+        font-size: 33px;
+        padding: 0 2rem;
+    }
+
+    .scroll-header {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .logo img {
+        width: 180px;
+        height: 180px;
+    }
+
     .about-image {
         height: 650px;
     }
