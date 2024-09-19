@@ -85,6 +85,24 @@ nav {
     right: 25%;
 }
 
+.nav-home:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: #0B9444;
+    bottom: -15px;
+    left: 50%;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+
+.nav-home:hover:after {
+    width: 50%;
+    left: 25%;
+    right: 25%;
+}
+
+
 .nav-links li a {
     position: relative;
     color: #0B9444;
@@ -678,7 +696,7 @@ audio {
 }
 
 .merch-item .btn {
-    margin: 0.5rem auto 0 auto;
+    margin: 1rem auto 0 auto;
 }
 
 .merch-item img {
@@ -775,16 +793,24 @@ audio {
     margin-bottom: 0.8rem;
 }
 
+.error-message {
+    color: red;
+    margin-bottom: 12px;
+    display: none;
+}
+
 .contact-form button {
     background-color: transparent;
     color: #FFFFFF;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.5rem;
     font-size: 16px;
-    font-weight: 600;
-    border: 2px solid #FFFFFF;
+    font-weight: 500;
+    border: 1px solid #FFFFFF;
     cursor: pointer;
     transition: opacity 0.3s ease;
     margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .contact-form button:hover {
@@ -865,10 +891,214 @@ audio {
 }
 
 
+
 /* Media Queries */
+@media screen and (min-width: 1800px) {
+    .about-image {
+        height: 650px;
+    }
+
+    .about-text p {
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+        font-size: 35px;
+    }
+
+    .title-color {
+        margin-bottom: 2.5rem;
+        font-size: 50px;
+    }
+
+    .Principles-card {
+        max-height: 220px !important;
+        height: 220px !important;
+        padding: 1.5rem 0 0.5rem 0;
+    }
+
+    .Principles-quote {
+        font-size: 25px;
+        /* padding: 1rem 1rem 0 1rem;*/
+    }
+
+    .Principles-title {
+        font-size: 30px;
+    }
+
+    .events-container .events-image img {
+        max-height: 700px;
+    }
+
+    .event-cards {
+        gap: 3rem;
+    }
+
+    .event-card {
+        padding: 2.5rem 0;
+    }
+
+
+    .event-details h3 {
+        font-size: 30px;
+    }
+
+    .event-details p {
+        font-size: 25px;
+        margin-bottom: 1rem;
+    }
+
+    .event-details .btn {
+        margin-top: 1rem;
+    }
+
+    .chants .container {
+
+        gap: 4rem;
+    }
+
+    .lyrics {
+        gap: 4rem;
+
+    }
+
+    .lyrics .lyricsimg {
+        height: 650px;
+    }
+
+    #chants-and-songs .song-cover {
+        height: 800px;
+    }
+
+    .song-container {
+        top: -10px;
+    }
+
+    .chants .title-color {
+        margin-bottom: 3.5rem;
+    }
+
+    .merch-item {
+        max-width: 550px;
+    }
+
+    .availability-info {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 1.5rem 2.5rem;
+        font-size: 28px;
+    }
+
+    .full-about-content .sm img {
+        height: 650px;
+    }
+
+    .full-about-content .first img {
+        height: 600px;
+    }
+
+    .full-about-content .quote blockquote {
+        font-size: 25px;
+    }
+
+    .full-about-content h2 {
+        margin-bottom: 3rem;
+        font-size: 50px;
+        margin-top: 2rem;
+    }
+
+    .parag {
+        line-height: 4rem;
+        font-size: 35px;
+    }
+
+    .flex span {
+        font-size: 2.5rem;
+    }
+
+    .span-flex span {
+        font-size: 2.5rem;
+    }
+
+    .contact-form label {
+        font-size: 18px;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form .message-label {
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        margin-bottom: 2rem;
+        font-size: 18px;
+    }
+
+    .contact-form button {
+        padding: 1rem 2rem;
+        font-size: 18px;
+    }
+
+    .contact-container .social-list li a {
+        font-size: 30px;
+    }
+
+    .copyright-notice p {
+        font-size: 17px;
+    }
+
+    .copyright-notice .made-by-url {
+        font-size: 17px;
+    }
+
+}
+
 @media screen and (max-width: 1338px) {
     .event-cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about-p-one {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .about-p-two {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .full-about-content .sm img {
+        height: 450px;
+    }
+
+    .full-about-content .first img {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+
+    .full-about-content .sm img {
+        height: 550px;
+    }
+
+    .full-about-content .first img {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1800px) {}
+
+@media screen and (min-width: 2200px) {
+
+    .full-about-content .sm img {
+        height: 750px;
+    }
+
+    .full-about-content .first img {
+        height: 700px;
     }
 }
 
@@ -908,6 +1138,10 @@ audio {
     }
 
     .nav-link:after {
+        bottom: -5px;
+    }
+
+    .nav-home:after {
         bottom: -5px;
     }
 
@@ -1185,6 +1419,11 @@ audio {
 
     .merch2-mobile {
         content: url('./images/ultras-t-shirt2-mobile.jpg');
+    }
+
+    .merch-item .btn {
+        margin: 1rem auto 0 auto;
+        font-size: 16px;
     }
 
     /*contact*/
@@ -1564,4 +1803,25 @@ audio {
         max-width: 85%;
         object-fit: fill;
     }
+}
+
+/*form */
+.message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
 }

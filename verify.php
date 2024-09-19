@@ -32,27 +32,45 @@ if (isset($_GET['token'])) {
 
         if ($updateStmt->execute()) {
             // Send email to admin with the user's message
-            $adminEmail = "contactus@ultras-sagesse.com
-";  // Replace with the actual admin email
+            $adminEmail = "contactus@ultras-sagesse.com";  // Replace with the actual admin email
             $subject = "New Message from Ultras Sagesse Website";
             $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
             $headers = "From: $email";  // Replace with the actual sender email
 
             if (mail($adminEmail, $subject, $body, $headers)) {
-                echo "Your email has been verified. Thank you! Your message has been sent to the admin.";
-            } else {
-                echo "Your email has been verified, but the message failed to send to the admin.";
+                $statusMessage= '<div class="message success">Your email has been verified. Thank you! Your message has been sent to the admin.</div>';
+            }else {
+                $statusMessage= '<div class="message error">Your email has been verified, but the message failed to send to the admin.</div>';
             }
         } else {
-            echo "Failed to verify email.";
+            $statusMessage= '<div class="message error">Failed to verify email.</div>';
         }
 
         $updateStmt->close();
     } else {
-        echo "Invalid or expired verification link.";
+        $statusMessage= '<div class="message error">Invalid or expired verification link.</div>';
     }
 
     $stmt->close();
 }
 
 $conn->close();
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <?php
+    // Display the status message if it's set
+    if (isset($statusMessage)) {
+        echo $statusMessage;
+    }
+    ?>
+</body>
+</html>
